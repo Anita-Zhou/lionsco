@@ -1,0 +1,1 @@
+const registerPlugin=()=>{window.dispatchEvent(new CustomEvent("service-plugin-dock-event",{detail:{type:"register",name:"sorftimesave"}}))};window._ServicePluginDockInit?registerPlugin():window.addEventListener("service-plugin-dock-event-init",(e=>registerPlugin()),!1);

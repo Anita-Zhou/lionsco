@@ -1,0 +1,54 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "content/img/icons/i128.png",
+         "48": "content/img/icons/i48.png",
+         "64": "content/img/icons/i64.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Sorftime Save"
+   },
+   "author": "Sorftime",
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "css/vendors.css", "css/shopee.css", "css/vues.css", "css/common.css" ],
+      "js": [ "content/js/jquery-3.5.0.min.js", "exceljs.min.js", "vendors.js", "shopee.js", "vues.js", "common.js", "content.js" ],
+      "matches": [ "*://us.amazon.com/*", "*://www.amazon.com/*", "*://www.amazon.co.uk/*", "*://www.amazon.de/*", "*://www.amazon.fr/*", "*://www.amazon.it/*", "*://www.amazon.ca/*", "*://www.amazon.com.mx/*", "*://www.amazon.es/*", "*://www.amazon.co.jp/*", "*://www.amazon.in/*", "*://www.amazon.ae/*", "*://www.amazon.com.au/*", "*://www.amazon.com.br/*", "*://www.amazon.sa/*", "*://www.walmart.com/*", "*://shopee.tw/*", "*://shopee.ph/*", "*://shopee.com.my/*", "*://shopee.sg/*", "*://shopee.vn/*", "*://shopee.co.id/*", "*://shopee.co.th/*", "*://shopee.com.br/*", "*://xiapi.xiapibuy.com/*", "*://ph.xiapibuy.com/*", "*://my.xiapibuy.com/*", "*://sg.xiapibuy.com/*", "*://vn.xiapibuy.com/*", "*://th.xiapibuy.com/*", "*://id.xiapibuy.com/*", "*://br.xiapibuy.com/*", "*://*.temu.com/*", "*://*.shein.com/*", "*://seller.shopee.cn/*", "*://save.sorftime.com/plugCollection*", "*://savepre.sorftime.com/plugCollection*", "*://savetest.sorftime.com/plugCollection*", "https://localhost:44359/", "http://localhost:8080/*", "http://localhost:8081/plugCollection*", "*://celebritytest.sorftime.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "exceljs.min.js", "vendors.js", "shopee.js", "vues.js", "common.js", "seller.js" ],
+      "matches": [ "http://localhost:8080/*", "http://localhost:8081/*", "*://seller.sorftime.com/*", "*://sellertest.sorftime.com/*", "*://sellerpre.sorftime.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "alibaba.js" ],
+      "matches": [ "*://*.1688.com/offer/*", "*://cart.1688.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "zh_CN",
+   "description": "辅助亚马逊卖家产品调研及运营。",
+   "differential_fingerprint": "1.b60c0a1b11588bf7258ba354385ec582c856e3a92eff1d890a8b49d141a88636",
+   "homepage_url": "https://www.sorftime.com",
+   "host_permissions": [ "http://*/*", "https://*/*", "https://www.1688.com/*" ],
+   "icons": {
+      "100": "content/img/icons/i100.png",
+      "128": "content/img/icons/i128.png",
+      "16": "content/img/icons/i16.png",
+      "32": "content/img/icons/i32.png",
+      "48": "content/img/icons/i48.png",
+      "64": "content/img/icons/i64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkF7R0IhuhzRjxVZOhkRAVYqPahsj4BJ4Cj0Frkoy+WhSi6KWl8nwcvuO4gyUBRBMNc0oH5wPwxeZBKvRACbk2SS+QUW5yuzwNGs9zUPpaa4ZhLipF36ygar3U+Dvcfg3pfo4NzL9/S8qPgIoc9QqqWYR0LfA4BjzqvF8FWJUGoefACJe8CSGOFkGFcqRtURpK73ZiiTSjwJrG4/H0eNadsF1Q7xqPM2O5O5bEJLTaYnA72aymScldBzS20Nijrcuf+fgxgTLAsjBLKCckhhW0zkfJR6xAmzxRlhIDwdiglBEhRGP6Z3OfcqyUy3agqK0oQVVW6bJDMdFC6P8VjVfCQIDAQAB",
+   "manifest_version": 3,
+   "name": "Sorftime Save",
+   "permissions": [ "tabs", "storage", "cookies", "alarms", "contextMenus" ],
+   "short_name": "Sorftime",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3.9.4",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "/content/*", "manifest.json", "fetchfilter.js" ]
+   } ]
+}
