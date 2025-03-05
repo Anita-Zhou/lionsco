@@ -34,23 +34,32 @@ this_name = 'TEST'
 
 # Example implementations of previous functions using pandas
 def cal_average(df, column_name):
-    return df[column_name].mean() if not df[column_name].empty else 0
+    # Temporarily drop rows where this column is 0
+    valid_values = df[column_name][df[column_name] != 0]  
+    # Calculate mean only using valid values
+    return valid_values.mean() if not valid_values.empty else 0
 
 def cal_median(df, column_name):
-    return df[column_name].median() if not df[column_name].empty else 0
+    # Temporarily drop rows where this column is 0
+    valid_values = df[column_name][df[column_name] != 0]  
+    return valid_values.median() if valid_values.empty else 0
 
 def cal_last_x_percent(df, column_name, x=25):
-    if df[column_name].empty:
+    # Temporarily drop rows where this column is 0
+    valid_values = df[column_name][df[column_name] != 0]  
+    if valid_values.empty:
         return 0
-    sorted_values = df[column_name].dropna().sort_values(ascending=False)
+    sorted_values = valid_values.sort_values(ascending=False)
     n = max(1, int(len(sorted_values) * (x / 100)))
     return sorted_values.tail(n).mean() if n > 0 else 0
 
 def count_keyword(df, column_name, keyword):
-    return df[column_name].astype(str).str.lower().eq(str(keyword).lower()).sum()
+    return df[column_name].astype(str).str.lower().eq(str(keyword).lower()).count()
 
 def count_new_product(df, column_name, days):
-    return df[column_name].lt(days).sum()
+    # Temporarily drop rows where this column is 0
+    valid_df = df[df[column_name] != 0]  
+    return (valid_df[column_name] < days).sum() if not valid_df.empty else 0
 
 def sum_top_x(df, column_name, x=10):
     return df[column_name].nlargest(x).sum() if not df[column_name].empty else 0
@@ -124,8 +133,8 @@ def process_file(file_path):
         'avg_price': cal_average(product_df, '实际价格($)'),
         'avg_num_sales': cal_average(product_df, 'Listing月销量'),
         'avg_reviews': cal_average(product_df, '评价数量'),
-        'amz_share': product_df.loc[product_df['BBX卖家属性'] == '亚马逊自营', 'Listing月销额($)'].sum(),
-        'new_share': product_df.loc[product_df['上架时长(天）'] < 181, 'Listing月销额($)'].sum(),
+        'amz_share': (product_df.loc[product_df['BBX卖家属性'] == '亚马逊自营', 'Listing月销额($)'].sum())/(product_df['Listing月销额($)'].sum()),
+        'new_share': (product_df.loc[product_df['上架时长(天）'] < 181, 'Listing月销额($)'].sum())/(product_df['Listing月销额($)'].sum()),
         'avg_fba': cal_average(product_df, 'FBA费用占比')
     }
     
@@ -166,6 +175,11 @@ def save_result(results):
     
     # percentage2 = calculate_percentage("H", cal_sheet)
     # template_sheet["F16"] = percentage2
+
+    # Create a new sheet for filtered data
+    extra_sheet = template_wb.create_sheet(title="Filtered Raw Data")  # Create a second sheet
+
+
 
     # Save the modified template
     template_wb.save(new_file_path)
