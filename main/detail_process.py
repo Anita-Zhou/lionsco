@@ -31,6 +31,9 @@ AMZ自营额 = 'H6'
 品牌数 = 'H11'
 
 this_name = 'TEST'
+top100 = False
+top400 = False
+keyword_filter = None
 
 # Example implementations of previous functions using pandas
 def cal_average(df, column_name):
@@ -42,7 +45,10 @@ def cal_average(df, column_name):
 def cal_median(df, column_name):
     # Temporarily drop rows where this column is 0
     valid_values = df[column_name][df[column_name] != 0]  
-    return valid_values.median() if valid_values.empty else 0
+    # # DEBUG
+    # print("cal_median")
+    # print(valid_values)
+    return valid_values.median() if not valid_values.empty else 0
 
 def cal_last_x_percent(df, column_name, x=25):
     # Temporarily drop rows where this column is 0
@@ -54,7 +60,12 @@ def cal_last_x_percent(df, column_name, x=25):
     return sorted_values.tail(n).mean() if n > 0 else 0
 
 def count_keyword(df, column_name, keyword):
-    return df[column_name].astype(str).str.lower().eq(str(keyword).lower()).count()
+    # # DEBUG
+    # print("keyword: " + keyword)
+    valid_df = df[df[column_name] == keyword]
+    # print(valid_df)
+    # print(valid_df.shape[0])
+    return valid_df.shape[0]
 
 def count_new_product(df, column_name, days):
     # Temporarily drop rows where this column is 0
@@ -76,7 +87,10 @@ def create_avg_fba(df):
     # Replace infinity values (from division by zero) with 0
     df['FBA费用占比'] = df['FBA费用占比'].replace([float('inf'), -float('inf')], 0)
 
-# Process the raw-data file
+
+"""
+Start processing a single raw data file using pandas.
+"""
 def process_file(file_path):
     """Process a single raw data file using pandas."""
     # Load specific sheets from the Excel file
@@ -93,8 +107,9 @@ def process_file(file_path):
     # print("Rows with non-numeric 'Listing月销量':")
     # print(non_numeric_rows)
 
+    # ============================================================== #
+    # ================  Step 1: Filter out NA values =============== #
     cols = ['Listing月销量', 'Listing月销额($)', '实际价格($)', '上架时长(天）']
-
     for col in cols:
         if col in product_df.columns:
             # Convert to numeric, replacing non-numeric values with 0
@@ -113,17 +128,33 @@ def process_file(file_path):
     ].dropna(subset=["产品名称", "五点描述"], how="all")  # Drop rows where both are NaN
 
     create_avg_fba(product_df)
-    # DEBUG
-    # Print all column names to check for typos or formatting issues
-    print("Column Names:", product_df.columns.tolist())
+    # # DEBUG
+    # # Print all column names to check for typos or formatting issues
+    # print("Column Names:", product_df.columns.tolist())
 
+    # =============================================================== #
+    # ================  Step 2: Copy filtered raw data ============== #
+    # Create a copy of the initially filtered data
+    required_columns = [
+        '序号', '主图', '产品名称', 'ASIN', 'URL', 'Listing月销量', 'Listing月销额($)', 
+        '五点描述', '实际价格($)', '品牌', 'BBX卖家属性', '店铺', '国籍/地区', 
+        '上架时长(天）', '广告花费指数', '评价数量', 'FBA费用($)', '变体数量', '是否抛货', 
+        'Color', 'Material', 'FBA费用占比'
+    ]
+
+    # Ensure only existing columns are selected (avoid errors if some columns are missing)
+    available_columns = [col for col in required_columns if col in product_df.columns]
+    raw_data = product_df[available_columns].copy()  # Save a copy of the raw data for reference
+
+    # =============================================================== #
+    # ================  Step 3: Caulate integrated data ============= #
     # You can now use these functions with column names instead of Excel coordinates
     # Example usage (you'll need to map your Excel columns to DataFrame column names):
     results = {
         'avg_sales': cal_average(product_df, 'Listing月销额($)'), 
         'median_sales': cal_median(product_df, 'Listing月销额($)'), 
         'total_prdcts': count_unique(product_df, 'ASIN'),    
-        'mkt_barrier' : sum_top_x(product_df, 'Listing月销额($)', 10),
+        'mkt_barrier' :( sum_top_x(product_df, 'Listing月销额($)', 10))/product_df['Listing月销额($)'].sum(),
         'last25_sales': cal_last_x_percent(product_df, 'Listing月销额($)', 25),
         'unique_brands': count_unique(product_df, '品牌'),
         'unique_sellers': count_unique(product_df, '店铺'),
@@ -138,9 +169,12 @@ def process_file(file_path):
         'avg_fba': cal_average(product_df, 'FBA费用占比')
     }
     
-    return results
+    return results, raw_data
 
-def save_result(results):
+'''
+Copy the given template and save the processed results to a new Excel file.
+'''
+def save_result(result, raw):
     """Save the processed results to a new Excel file based on the template."""
     # DEBUG
     print("save_result")
@@ -153,38 +187,49 @@ def save_result(results):
     template_wb = load_workbook(new_file_path)
     template_sheet = template_wb.active  # Assumes writing to the first sheet
 
+    # =========================================== #
+    # ================  Step 1  ================= #
     # Copy specific cells from raw to template
-    template_sheet[在售产品数] = results['total_prdcts']
-    template_sheet[买家垄断系数] = results['mkt_barrier']
-    template_sheet[月均销额] = results['avg_sales']
-    template_sheet[AMZ自营占比] = results['num_amz'] / results['total_prdcts']
-    template_sheet[平均上架天数] = results['avg_days']
-    template_sheet[新品占比] = str(results['new_prdcts']) + "个, " + str(results['new_prdcts'] / results['total_prdcts'])
+    template_sheet[在售产品数] = result['total_prdcts']
+    template_sheet[买家垄断系数] = result['mkt_barrier']
+    template_sheet[月均销额] = result['avg_sales']
+    template_sheet[AMZ自营占比] = str(result['num_amz']) + "个, " + str(result['num_amz'] / result['total_prdcts']*100) + "%"
+    template_sheet[平均上架天数] = result['avg_days']
+    template_sheet[新品占比] = str(result['new_prdcts']) + "个, " + str(result['new_prdcts'] / result['total_prdcts']*100) + "%"
     template_sheet[月搜索量]
-    template_sheet[后25销额] = results['last25_sales']
-    template_sheet[在售商家数] = results['unique_sellers']
-    template_sheet[平均价格] = results['avg_price']
-    template_sheet[月均销量] = results['avg_num_sales']
-    template_sheet[中位销额] = results['median_sales']
-    template_sheet[AMZ自营额] = results['amz_share']
-    template_sheet[平均评价数量] = results['avg_reviews']
-    template_sheet[新品市场份额] = results['new_share']
+    template_sheet[后25销额] = result['last25_sales']
+    template_sheet[在售商家数] = result['unique_sellers']
+    template_sheet[平均价格] = result['avg_price']
+    template_sheet[月均销量] = result['avg_num_sales']
+    template_sheet[中位销额] = result['median_sales']
+    template_sheet[AMZ自营额] = result['amz_share']
+    template_sheet[平均评价数量] = result['avg_reviews']
+    template_sheet[新品市场份额] = result['new_share']
     template_sheet[退货率]
-    template_sheet[平均FBA占比] = results['avg_fba']
-    template_sheet[品牌数] = results['unique_brands']
-    
-    # percentage2 = calculate_percentage("H", cal_sheet)
-    # template_sheet["F16"] = percentage2
+    template_sheet[平均FBA占比] = result['avg_fba']
+    template_sheet[品牌数] = result['unique_brands']
 
+    # =========================================== #
+    # ================  Step 2  ================= #
     # Create a new sheet for filtered data
     extra_sheet = template_wb.create_sheet(title="Filtered Raw Data")  # Create a second sheet
+    # Write DataFrame headers to Excel
+    for col_idx, col_name in enumerate(raw.columns, start=1):
+        extra_sheet.cell(row=1, column=col_idx, value=col_name)
 
-
+    # Write DataFrame values to Excel
+    for row_idx, row in enumerate(raw.itertuples(index=False), start=2):
+        for col_idx, value in enumerate(row, start=1):
+            extra_sheet.cell(row=row_idx, column=col_idx, value=value)
 
     # Save the modified template
     template_wb.save(new_file_path)
     print(f"Processed and saved: {new_file_path}")
 
+
+'''
+Execution starts here.
+'''
 def main():
     """Main function to iterate through raw files and process them."""
     for file_name in os.listdir(RAW_DIR):
@@ -195,9 +240,9 @@ def main():
         if file_name.endswith("产品看板导出.xlsx"):
             file_path = os.path.join(RAW_DIR, file_name)
             print(f"Processing file: {file_name}")
-            results = process_file(file_path)
+            results, raw_data = process_file(file_path)
             # Do something with results, like write to template
-            save_result(results)
+            save_result(results, raw_data)
 
 if __name__ == "__main__":
     main()
