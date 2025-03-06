@@ -107,8 +107,8 @@ def process_file(file_path):
     # print("Rows with non-numeric 'Listing月销量':")
     # print(non_numeric_rows)
 
-    # ============================================================== #
-    # ================  Step 1: Filter out NA values =============== #
+    # ============================================================== 
+    # ================  Step 1: Filter out NA values =============== 
     cols = ['Listing月销量', 'Listing月销额($)', '实际价格($)', '上架时长(天）']
     for col in cols:
         if col in product_df.columns:
@@ -117,15 +117,27 @@ def process_file(file_path):
         else:
             print(f"Warning: Column '{col}' not found in DataFrame")
 
+        if top400:
+            print("top400")
+            # Drop rows with value larger than 400
+            product_df = product_df[product_df['序号'] <= 400]
+            print(product_df)
+            print("_________________________")
+        if top100:
+            print(top100)
+            # Drop rows with value larger than 400
+            product_df = product_df[product_df['序号'] <= 100]
+
         # Drop rows with value smaller than 10
         product_df = product_df[product_df['Listing月销量'] >= 10]
 
     # TODO: Change this filter every time
     # Filter to keep rows where "产品名称" or "五点描述" contains "round" (case-insensitive)
-    product_df = product_df[
-        product_df["产品名称"].astype(str).str.lower().str.contains("round") |
-        product_df["五点描述"].astype(str).str.lower().str.contains("round")
-    ].dropna(subset=["产品名称", "五点描述"], how="all")  # Drop rows where both are NaN
+    if keyword_filter != None:
+        product_df = product_df[
+            product_df["产品名称"].astype(str).str.lower().str.contains(keyword_filter) |
+            product_df["五点描述"].astype(str).str.lower().str.contains(keyword_filter)
+        ].dropna(subset=["产品名称", "五点描述"], how="all")  # Drop rows where both are NaN
 
     create_avg_fba(product_df)
     # # DEBUG
@@ -212,7 +224,7 @@ def save_result(result, raw):
     # =========================================== #
     # ================  Step 2  ================= #
     # Create a new sheet for filtered data
-    extra_sheet = template_wb.create_sheet(title="Filtered Raw Data")  # Create a second sheet
+    extra_sheet = template_wb.create_sheet(title="产品") #Create a second sheet
     # Write DataFrame headers to Excel
     for col_idx, col_name in enumerate(raw.columns, start=1):
         extra_sheet.cell(row=1, column=col_idx, value=col_name)
@@ -232,6 +244,26 @@ Execution starts here.
 '''
 def main():
     """Main function to iterate through raw files and process them."""
+    # ============================
+    # Step 1: Get User Preferences
+    # ============================
+    
+    # Prompt user whether they want top 400 data
+    top400 = input("你只想要Top400的数据吗？ (yes/no): " ).strip().lower() == "yes"
+    
+    # Prompt user whether they want top 100 data
+    top100 = input("你只想要Top100的数据吗? (yes/no): " ).strip().lower() == "yes"
+    
+    # Prompt user for a keyword filter (optional)
+    keyword_filter = input("输入你想要筛选的关键词 (或按 Enter 键跳过): ").strip()
+    keyword_filter = keyword_filter if keyword_filter else None  # Convert empty input to None
+
+    print("\n==== User Selections ====")
+    print(f"Top 400: {top400}")
+    print(f"Top 100: {top100}")
+    print(f"Keyword Filter: {keyword_filter if keyword_filter else 'No keyword filter'}")
+    print("=========================\n")
+
     for file_name in os.listdir(RAW_DIR):
         # DEBUG 
         print("file name: " + file_name)
