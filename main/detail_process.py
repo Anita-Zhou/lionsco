@@ -3,6 +3,7 @@ import shutil
 import pandas as pd
 from openpyxl import load_workbook
 import statistics
+import re
 
 # Directory paths
 RAW_DIR = "../raw"
@@ -31,9 +32,14 @@ AMZ自营额 = 'H6'
 品牌数 = 'H11'
 
 this_name = 'TEST'
-top100 = False
-top400 = False
-keyword_filter = None
+top_num = None
+wanted_keyword = None
+unwanted_keyword = None
+
+def extract_product_name(filename):
+    """从文件名中提取产品名称"""
+    match = re.search(r'_(.*?)_([^_]+)产品看板导出', filename)
+    return match.group(2) if match else None
 
 # Example implementations of previous functions using pandas
 def cal_average(df, column_name):
@@ -96,6 +102,32 @@ def process_file(file_path):
     # Load specific sheets from the Excel file
     # Assume header row is row 3
     product_df = pd.read_excel(file_path, sheet_name="产品", header=2) 
+    total_num = product_df.shape[0]
+    # print(total_num)
+    print("--------------")
+    # ============================
+    # Step 1: Get User Preferences
+    # ============================
+    global this_name, top_num, wanted_keyword, unwanted_keyword  # Declare global variables to modify them
+
+    # Prompt user whether they want top 400 data
+    top_num = input(f"共有{total_num}个产品， 你想要看头部多少个产品的数据？(填入数字，或按 Enter 键跳过): ").strip()
+    top_num = int(top_num) if top_num.isdigit() else None  # Convert to int if possible
+
+    # Prompt user for a keyword filter (optional)
+    wanted_keyword = input("输入你想要的关键词 (或按 Enter 键跳过): ").strip()
+    wanted_keyword = wanted_keyword if wanted_keyword else None  # Convert empty input to None
+
+    # Prompt user for a keyword filter (optional)
+    unwanted_keyword = input("输入你不想要的关键词 (或按 Enter 键跳过): ").strip()
+    unwanted_keyword = unwanted_keyword if unwanted_keyword else None  # Convert empty input to None
+
+    print("\n**** User Selections ****")
+    print(f"Top {top_num} 产品数据")
+    print(f"Wanted Keyword: {wanted_keyword if wanted_keyword else 'No wanted keyword filter'}")
+    print(f"Unwanted Keyword: {unwanted_keyword if unwanted_keyword else 'No unwanted keyword filter'}")
+    print("************************\n")
+    
     # # DEBUG
     # # Print all column names to check for typos or formatting issues
     # print("Column Names:", product_df.columns.tolist())
@@ -107,8 +139,9 @@ def process_file(file_path):
     # print("Rows with non-numeric 'Listing月销量':")
     # print(non_numeric_rows)
 
-    # ============================================================== 
-    # ================  Step 1: Filter out NA values =============== 
+    # ================================
+    #   Step 2: Filter out NA values 
+    # ================================
     cols = ['Listing月销量', 'Listing月销额($)', '实际价格($)', '上架时长(天）']
     for col in cols:
         if col in product_df.columns:
@@ -116,28 +149,33 @@ def process_file(file_path):
             product_df[col] = pd.to_numeric(product_df[col], errors='coerce').fillna(0)
         else:
             print(f"Warning: Column '{col}' not found in DataFrame")
-
-        if top400:
-            print("top400")
-            # Drop rows with value larger than 400
-            product_df = product_df[product_df['序号'] <= 400]
-            print(product_df)
-            print("_________________________")
-        if top100:
-            print(top100)
-            # Drop rows with value larger than 400
-            product_df = product_df[product_df['序号'] <= 100]
-
-        # Drop rows with value smaller than 10
-        product_df = product_df[product_df['Listing月销量'] >= 10]
-
-    # TODO: Change this filter every time
-    # Filter to keep rows where "产品名称" or "五点描述" contains "round" (case-insensitive)
-    if keyword_filter != None:
+    #===================
+    # Drop unwanted rows
+    #===================
+    # Filter to keep rows where "产品名称" or "五点描述" contains <wanted_keyword> (case-insensitive)
+    if wanted_keyword:  # This ensures None or empty strings are ignored
         product_df = product_df[
-            product_df["产品名称"].astype(str).str.lower().str.contains(keyword_filter) |
-            product_df["五点描述"].astype(str).str.lower().str.contains(keyword_filter)
-        ].dropna(subset=["产品名称", "五点描述"], how="all")  # Drop rows where both are NaN
+            product_df["产品名称"].astype(str).str.lower().str.contains(wanted_keyword, na=False) |
+            product_df["五点描述"].astype(str).str.lower().str.contains(wanted_keyword, na=False)
+        ].dropna(subset=["产品名称", "五点描述"], how="all")  # Drop rows where both columns are NaN
+        this_name += f"_w_{wanted_keyword}"
+
+    # Filter to leave rows where "产品名称" or "五点描述" contains <unwanted_keyword> (case-insensitive)
+    if unwanted_keyword:  # Ensure unwanted_keyword is not None or empty
+        product_df = product_df[
+            ~product_df["产品名称"].astype(str).str.lower().str.contains(unwanted_keyword, na=False) &
+            ~product_df["五点描述"].astype(str).str.lower().str.contains(unwanted_keyword, na=False)
+        ]
+        this_name += f"_wo_{unwanted_keyword}"
+
+    if top_num and (top_num <= total_num):
+        # Drop rows with value larger than 400
+        product_df = product_df[product_df['序号'] <= top_num]
+        this_name += f"_top_{top_num}"
+
+    # Drop rows with value smaller than 10
+    product_df = product_df[product_df['Listing月销量'] >= 10]
+
 
     create_avg_fba(product_df)
     # # DEBUG
@@ -189,7 +227,7 @@ Copy the given template and save the processed results to a new Excel file.
 def save_result(result, raw):
     """Save the processed results to a new Excel file based on the template."""
     # DEBUG
-    print("save_result")
+    print("Saving...")
     # Create a copy of the template
     new_file_name = f"{this_name}_template.xlsx"
     new_file_path = os.path.join(RESULT_DIR, new_file_name)
@@ -245,36 +283,24 @@ Execution starts here.
 def main():
     """Main function to iterate through raw files and process them."""
     # ============================
-    # Step 1: Get User Preferences
+    # Step 1: Process Raw Files
     # ============================
-    
-    # Prompt user whether they want top 400 data
-    top400 = input("你只想要Top400的数据吗？ (yes/no): " ).strip().lower() == "yes"
-    
-    # Prompt user whether they want top 100 data
-    top100 = input("你只想要Top100的数据吗? (yes/no): " ).strip().lower() == "yes"
-    
-    # Prompt user for a keyword filter (optional)
-    keyword_filter = input("输入你想要筛选的关键词 (或按 Enter 键跳过): ").strip()
-    keyword_filter = keyword_filter if keyword_filter else None  # Convert empty input to None
-
-    print("\n==== User Selections ====")
-    print(f"Top 400: {top400}")
-    print(f"Top 100: {top100}")
-    print(f"Keyword Filter: {keyword_filter if keyword_filter else 'No keyword filter'}")
-    print("=========================\n")
-
     for file_name in os.listdir(RAW_DIR):
-        # DEBUG 
-        print("file name: " + file_name)
+        # # DEBUG 
+        # print("file name: " + file_name)
         if file_name.startswith("~$"):
             continue
         if file_name.endswith("产品看板导出.xlsx"):
+            print("=====================================")
             file_path = os.path.join(RAW_DIR, file_name)
             print(f"Processing file: {file_name}")
+            global this_name
+            this_name = extract_product_name(file_name)
+            print(f"Product Name: {this_name}")
             results, raw_data = process_file(file_path)
             # Do something with results, like write to template
             save_result(results, raw_data)
+            print("=====================================\n")
 
 if __name__ == "__main__":
     main()
