@@ -35,6 +35,7 @@ this_name = 'TEST'
 top_num = None
 wanted_keyword = None
 unwanted_keyword = None
+days = None
 
 def extract_product_name(filename):
     """从文件名中提取产品名称"""
@@ -114,6 +115,10 @@ def process_file(file_path):
     top_num = input(f"共有{total_num}个产品， 你想要看头部多少个产品的数据？(填入数字，或按 Enter 键跳过): ").strip()
     top_num = int(top_num) if top_num.isdigit() else None  # Convert to int if possible
 
+    # Prompt user whether they want top 400 data
+    days = input(f"你想要看上架天数多少天以内的产品数据？(填入数字，或按 Enter 键跳过): ").strip()
+    days = int(days) if days.isdigit() else None  # Convert to int if possible
+
     # Prompt user for a keyword filter (optional)
     wanted_keyword = input("输入你想要的关键词 (或按 Enter 键跳过): ").strip()
     wanted_keyword = wanted_keyword if wanted_keyword else None  # Convert empty input to None
@@ -121,6 +126,8 @@ def process_file(file_path):
     # Prompt user for a keyword filter (optional)
     unwanted_keyword = input("输入你不想要的关键词 (或按 Enter 键跳过): ").strip()
     unwanted_keyword = unwanted_keyword if unwanted_keyword else None  # Convert empty input to None
+
+
 
     print("\n**** User Selections ****")
     print(f"Top {top_num} 产品数据")
@@ -166,12 +173,16 @@ def process_file(file_path):
             ~product_df["产品名称"].astype(str).str.lower().str.contains(unwanted_keyword, na=False) &
             ~product_df["五点描述"].astype(str).str.lower().str.contains(unwanted_keyword, na=False)
         ]
-        this_name += f"_wo_{unwanted_keyword}"
 
     if top_num and (top_num <= total_num):
         # Drop rows with value larger than 400
         product_df = product_df[product_df['序号'] <= top_num]
-        this_name += f"_top_{top_num}"
+        this_name += f"_top{top_num}"
+
+    if days:
+        # Drop rows with value larger than <days>
+        product_df = product_df[product_df['上架时长(天）'] <= days]
+        this_name += f"_days{days}"
 
     # Drop rows with value smaller than 10
     product_df = product_df[product_df['Listing月销量'] >= 10]
@@ -189,7 +200,7 @@ def process_file(file_path):
         '序号', '主图', '产品名称', 'ASIN', 'URL', 'Listing月销量', 'Listing月销额($)', 
         '五点描述', '实际价格($)', '品牌', 'BBX卖家属性', '店铺', '国籍/地区', 
         '上架时长(天）', '广告花费指数', '评价数量', 'FBA费用($)', '变体数量', '是否抛货', 
-        'Color', 'Material', 'FBA费用占比'
+        'Color', 'Material', 'Size', 'FBA费用占比'
     ]
 
     # Ensure only existing columns are selected (avoid errors if some columns are missing)
