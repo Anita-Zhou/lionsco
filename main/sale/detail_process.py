@@ -6,9 +6,9 @@ import statistics
 import re
 
 # Directory paths
-RAW_DIR = "../raw"
-RESULT_DIR = "../result"
-TEMPLATE_FILE = "../template3.xlsx"
+RAW_DIR = "../../raw/sale"
+RESULT_DIR = "../../result/sale"
+TEMPLATE_FILE = "../../template3.xlsx"
 
 产品名 = 'A4'
 类目链接 = 'D4'
