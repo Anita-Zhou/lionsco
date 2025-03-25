@@ -68,11 +68,28 @@ Execution starts here.
 '''
 def main():
     """Main function to iterate through raw files and process them."""
-    # Initialize the Chrome browser
-    # driver = webdriver.Chrome()
-    # merchant_site = get_merchant_site(driver)  
-    # driver.quit()
-    get_merchant_address(get_merchant_site())
+    # ============================
+    # Step 1: Process Raw Files
+    # ============================
+    for file_name in os.listdir(RAW_DIR):
+        # # DEBUG 
+        # print("file name: " + file_name)
+        if file_name.startswith("~$"):
+            continue
+        if file_name.endswith("产品看板导出.xlsx"):
+            print("=====================================")
+            print("                 START               ")
+            print("=====================================")
+            file_path = os.path.join(RAW_DIR, file_name)
+            print(f"Processing file: {file_name}")
+            # Prompt user for a keyword filter (optional)
+            is_process = input("你要处理这个文件吗 (yes/no): ").strip()
+            if is_process.lower() != "yes":
+                print("Skipping...")
+                continue
+            process_file(file_path)
+            print("=====================================\n")
+    # get_merchant_address(get_merchant_site())
 
 if __name__ == "__main__":
     main()
