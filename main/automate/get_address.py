@@ -19,18 +19,28 @@ product_site = f'https://www.amazon.com/dp/{ASIN}?th=1'
 RAW_DIR = "../../raw/sale"
 
 
-def get_merchant_site():
+def get_merchant_site(p_site):
     with sync_playwright() as p:
+        # Launch the browser
         browser = p.chromium.launch()
         page = browser.new_page()
-        page.goto(product_site)
 
+        # Go to product site
+        page.goto(p_site)
         # Wait for the element to be visible (optional but recommended)
         page.wait_for_selector("#sellerProfileTriggerId")
-
         # Extract href attribute
         merchant = page.get_attribute("#sellerProfileTriggerId", "href")
-        print("Merchant link:", merchant)
+        print("***Merchant link:", merchant)
+
+        # Go to merchant site
+        page.goto(merchant)
+        # Extract inner text attribute
+        content = page.evaluate("""() => {
+            return document.querySelector("#page-section-detail-seller-info").innerText;
+        }""")
+        print("*** :"content)
+
         browser.close()
         return merchant
 
@@ -51,14 +61,14 @@ def get_merchant_address(merchant_site):
 
 def process_file(file_path):
     """Process a single raw data file using pandas."""
-    # Load specific sheets from the Excel file
-    # Assume header row is row ?
-    product_df = pd.read_excel(file_path, sheet_name="产品", header=5) 
+    # Assume header row is row 4 (Note that row 4 is represented as 3 in pandas)
+    product_df = pd.read_excel(file_path, sheet_name="产品", header=3) 
     asins = product_df["ASIN"].unique()
     print(f"ASINs found: {asins}")
     # Do processing here
     for asin in asins:
-        get_merchant_address(get_merchant_site())
+        product_site = f'https://www.amazon.com/dp/{asin}?th=1'
+        address = get_merchant_address(get_merchant_site(product_site))
 
 
 

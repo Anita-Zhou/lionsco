@@ -102,7 +102,7 @@ def process_file(file_path):
     """Process a single raw data file using pandas."""
     # Load specific sheets from the Excel file
     # Assume header row is row ?
-    product_df = pd.read_excel(file_path, sheet_name="产品", header=3) 
+    product_df = pd.read_excel(file_path, sheet_name="产品", header=1)
     total_num = product_df.shape[0]
     # print(total_num)
     print("--------------")
