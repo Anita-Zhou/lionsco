@@ -146,7 +146,7 @@ def post_process(filename):
 for filename in os.listdir(input_folder): 
     if filename.startswith("~$"):
         continue
-    if filename.endswith(".xlsx") and "_反查出单词列表" in filename:
+    if filename.endswith(".xlsx") and "_反查关键词" in filename:
         print("=====================================")
         print("                 START               ")
         print("=====================================")
