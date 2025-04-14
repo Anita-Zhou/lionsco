@@ -102,7 +102,7 @@ def process_file(file_path):
     """Process a single raw data file using pandas."""
     # Load specific sheets from the Excel file
     # Assume header row is row ?
-    product_df = pd.read_excel(file_path, sheet_name="产品", header=1)
+    product_df = pd.read_excel(file_path, sheet_name="产品", header=3)
     total_num = product_df.shape[0]
     # print(total_num)
     print("--------------")
@@ -186,6 +186,9 @@ def process_file(file_path):
 
     # Drop rows with value smaller than 10
     product_df = product_df[product_df['Listing月销量'] >= 6]
+
+    # Drop rows with value smaller than 10
+    product_df = product_df[product_df['Listing月销额($)'] >= 0]
 
 
     create_avg_fba(product_df)

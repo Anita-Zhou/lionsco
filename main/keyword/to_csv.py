@@ -54,41 +54,6 @@ input_folder = f"{RAW_DIR}/{dir_name}"
 output_file = os.path.join(RESULT_DIR, dir_name + "_combined.xlsx")
 
 if __name__ == "__main__":
-    # Loop through all Excel files in the folder
-    for filename in os.listdir(input_folder): 
-        if filename.startswith("~$"):
-            continue
-        if filename.endswith(".xlsx"):
-            print("=====================================")
-            print("                 START               ")
-            print("=====================================")
-
-            # Initialize an Excel writer
-            filepath = os.path.join(input_folder, filename)
-            out = os.path.join(RESULT_DIR, filename)
-            print("Output file: ", out)
-            writer = pd.ExcelWriter(out, engine='openpyxl')
-            print(f"{filepath}")
-
-            # Read the '产品' sheet
-            try:
-                df = pd.read_excel(filepath, sheet_name="产品", header=0)
-            except Exception as e:
-                print(f"Error reading file {filename}: {e}")
-                continue
-    
-    # Print the word frequency
-        word_freq = count_word_freq(df, "关键词")
-        freq_df = pd.DataFrame(word_freq.items(), columns=["word", "count"]).sort_values(by="count", ascending=False)
-        top_words = set(freq_df["word"].head(10))
-        all_words = set(freq_df["word"])
-        niche_words = all_words - top_words
-        print(f"Top 10 frequent words: {freq_df.head(10)}")
-        freq_df.to_excel(writer, sheet_name="词频", index=False)
-
-        # Write to the output Excel file with ASIN as the sheet name
-        df.to_excel(writer, index=False)
-
-        # Save the final combined file
-        writer.close()
-        print(f"Processed file saved to: {out}")
+    input_file = input("Enter the Excel file to process: ")
+    to_csv()
+    test()
