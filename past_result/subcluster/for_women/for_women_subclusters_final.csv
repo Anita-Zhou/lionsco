@@ -1,0 +1,697 @@
+Keyword Phrase,Magnet IQ Score,Search Volume,Search Volume Trend,Competing Products,CPR,Cluster,Subcluster
+artsy gifts ,237.0,473.0,11.0,2000.0,8, ,adj: artsy
+beauty gifts ,33.0,3313.0,54.0,100000.0,28, ,adj: artsy
+aesthetic gifts ,9.0,472.0,8.0,50000.0,8, ,adj: artsy
+creative gifts ,6.0,573.0,8.0,100000.0,9, ,adj: artsy
+elegant gifts ,5.0,459.0,37.0,100000.0,8, ,adj: artsy
+handmade gifts ,9.0,909.0,63.0,100000.0,12, ,adj: artsy
+coolest gifts ,1074.0,6443.0,45.0,6000.0,32, ,adj: cool
+cool gadgets  ,537,"2,147",24,"4,000",27,,adj: cool
+coolest gift ,265.0,1588.0,0.0,6000.0,26, ,adj: cool
+cool stuff girls,183.0,1832.0,-2.0,10000.0,26, ,adj: cool
+cool gifts ,27.0,2707.0,29.0,100000.0,27, ,adj: cool
+awesome gifts ,4.0,337.0,13.0,90000.0,8, ,adj: cool
+cool stuff guys,111.0,442.0,2.0,4000.0,8, ,adj: cool
+comfy  ,49,342,56,"7,000",8,,adj: cozy
+cozy gifts ,71.0,6429.0,58.0,90000.0,32, ,adj: cozy
+cozy  ,4,364,240,"100,000",8,,adj: cozy
+soft gifts ,3.0,305.0,19.0,100000.0,8, ,adj: cozy
+comfy gifts ,6.0,571.0,28.0,100000.0,9, ,adj: cozy
+warm gifts ,6.0,573.0,137.0,100000.0,9, ,adj: cozy
+comfort items ,5.0,481.0,6.0,100000.0,9, ,adj: cozy
+comfort items  ,5,481,6,"100,000",9,,adj: cozy
+cozy ,4.0,364.0,240.0,100000.0,8, ,adj: cozy
+crochet gifts ,71.0,713.0,28.0,10000.0,10, ,adj: cozy
+warm hoodies  ,232,"2,319",84,"10,000",27,,adj: cozy
+cozy hoodies  ,58,"1,164",42,"20,000",26,,adj: cozy
+cozy items  ,18,358,-4,"20,000",8,,adj: cozy
+warm and cozy gifts ,12.0,365.0,4.0,30000.0,8, ,adj: cozy
+cute stocking stuffers  ,64,573,56,"9,000",9,,adj: cute
+cute gifts ,54.0,5430.0,17.0,100000.0,31, ,adj: cute
+cute stuff  ,13,"1,283",37,"100,000",26,,adj: cute
+cute little gifts ,4.0,427.0,18.0,100000.0,8, ,adj: cute
+cute small gifts ,4.0,397.0,18.0,100000.0,8, ,adj: cute
+fun things ,58.0,466.0,35.0,8000.0,8, ,adj: fun
+fun stuff  ,23,452,2,"20,000",8,,adj: fun
+funny snuggies adults,950.0,302.0,5.0,318.0,8, ,adj: fun
+funny candles friends,387.0,773.0,27.0,2000.0,11, ,adj: fun
+silly gifts ,178.0,713.0,10.0,4000.0,10, ,adj: fun
+naughty gifts ,141.0,844.0,19.0,6000.0,11, ,adj: fun
+joke gifts ,89.0,713.0,28.0,8000.0,10, ,adj: fun
+funny stocking stuffers  ,67,534,40,"8,000",9,,adj: fun
+fun gifts ,42.0,4167.0,25.0,100000.0,29, ,adj: fun
+gifts funny,4.0,369.0,-2.0,100000.0,8, ,adj: fun
+funny gifts,4.0,404.0,9.0,100000.0,8, ,adj: fun
+funny gift ,4.0,440.0,33.0,100000.0,8, ,adj: fun
+fun gifts unique,6.0,387.0,75.0,60000.0,8, ,adj: fun
+fun things  ,58,466,35,"8,000",8,,adj: fun
+over the shoulder fanny pack ,206.0,411.0,11.0,2000.0,8, ,adj: fun
+fun stuff ,23.0,452.0,2.0,20000.0,8, ,adj: fun
+silly headbands  ,569,308,333,541,8,,adj: fun
+funny blankets  ,222,443,339,"2,000",8,,adj: fun
+funny headbands  ,73,364,19,"5,000",8,,adj: fun
+fun headbands  ,48,436,-1,"9,000",8,,adj: fun
+bougie gifts ,1163.0,1163.0,54.0,1000.0,26, ,adj: luxurious
+hygge gifts ,806.0,452.0,38.0,561.0,8, ,adj: luxurious
+gifts bougie ,424.0,424.0,24.0,1000.0,8, ,adj: luxurious
+luxury gifts,6.0,337.0,66.0,60000.0,8, ,adj: luxurious
+classy gifts ,7.0,427.0,79.0,60000.0,8, ,adj: luxurious
+fashion gifts ,3.0,342.0,29.0,100000.0,8, ,adj: luxurious
+sunshine gifts ,226.0,1584.0,148.0,7000.0,27, ,adj: nature
+gifts nature lovers ,67.0,334.0,25.0,5000.0,8, ,adj: nature
+organic gifts ,64.0,642.0,16.0,10000.0,10, ,adj: nature
+garden gifts ,34.0,1340.0,30.0,40000.0,26, ,adj: nature
+nature gifts ,22.0,442.0,40.0,20000.0,8, ,adj: nature
+plants gifts ,19.0,574.0,27.0,30000.0,9, ,adj: nature
+outdoor gifts ,7.0,713.0,21.0,100000.0,10, ,adj: nature
+roses gifts ,5.0,426.0,57.0,90000.0,8, ,adj: nature
+natural gifts ,5.0,450.0,58.0,100000.0,8, ,adj: nature
+floral gifts ,4.0,357.0,4.0,100000.0,8, ,adj: nature
+all natural gifts ,4.0,378.0,136.0,100000.0,8, ,adj: nature
+flower gifts ,4.0,449.0,-3.0,100000.0,8, ,adj: nature
+rose gifts ,8.0,713.0,9.0,90000.0,10, ,adj: nature
+gardening gifts ,512.0,10238.0,42.0,20000.0,41, ,adj: nature
+best gifts outdoorsy ,454.0,431.0,11.0,950.0,8, ,adj: nature
+garden gifts unique,82.0,571.0,7.0,7000.0,9, ,adj: nature
+plant gifts ,61.0,1836.0,24.0,30000.0,27, ,adj: nature
+garden decor gifts ,58.0,461.0,93.0,8000.0,8, ,adj: nature
+garden gifts ,9.0,349.0,77.0,40000.0,8, ,adj: nature
+gardening accessories  ,23,468,62,"20,000",8,,adj: nature
+plant accessories  ,18,534,,"30,000",9,,adj: nature
+rose  ,14,"1,366",-12,"100,000",26,,adj: nature
+useful gifts ,115.0,3457.0,37.0,30000.0,28, ,adj: practical
+gifts practical ,5.0,371.0,43.0,80000.0,8, ,adj: practical
+practical gifts ,30.0,2434.0,53.0,80000.0,27, ,adj: practical
+small thank you gifts ,4.0,373.0,8.0,90000.0,8, ,adj: small
+mini gifts ,32.0,1584.0,69.0,50000.0,26, ,adj: small
+mini gift ,23.0,468.0,81.0,20000.0,8, ,adj: small
+gifts minimalist ,17.0,349.0,1041.0,20000.0,8, ,adj: small
+small gifts,4.0,438.0,73.0,100000.0,8, ,adj: small
+little gifts ,4.0,847.0,20.0,200000.0,11, ,adj: small
+cheap gifts,4.0,424.0,131.0,100000.0,8, ,adj: small
+small gift ,4.0,429.0,12.0,100000.0,8, ,adj: small
+small gifts,3.0,337.0,58.0,100000.0,8, ,adj: small
+cheap gifts,3.0,315.0,33.0,100000.0,8, ,adj: small
+small gift ,3.0,644.0,16.0,200000.0,10, ,adj: small
+small gifts ,2.0,360.0,176.0,200000.0,8, ,adj: small
+small gifts ,135.0,13485.0,49.0,100000.0,40, ,adj: small
+tiny gifts ,12.0,486.0,71.0,40000.0,9, ,adj: small
+accessory gifts,4.0,445.0,,100000.0,8, ,adj: small
+consumable gifts ,860.0,431.0,159.0,501.0,8, ,adj: small
+inexpensive gifts ,79.0,1586.0,72.0,20000.0,26, ,adj: small
+tech gifts ,61.0,1825.0,72.0,30000.0,26, ,adj: tech
+gifts creative ,4.0,401.0,165.0,100000.0,8, ,adj: unique
+unusual gifts who have everything,2600.0,845.0,44.0,325.0,11, ,adj: unique
+monogrammed gifts ,687.0,4124.0,45.0,6000.0,31, ,adj: unique
+unusual gifts ,608.0,2431.0,31.0,4000.0,27, ,adj: unique
+unique gifts who have everything,261.0,1044.0,51.0,4000.0,25, ,adj: unique
+unique gifts ,241.0,24078.0,42.0,100000.0,54, ,adj: unique
+best gifts who have everything,84.0,844.0,26.0,10000.0,11, ,adj: unique
+unusual 's gifts,80.0,399.0,353.0,5000.0,8, ,adj: unique
+gifts unique,6.0,644.0,20.0,100000.0,10, ,adj: unique
+unique gifts,5.0,481.0,29.0,100000.0,9, ,adj: unique
+gift unique,5.0,461.0,11.0,100000.0,8, ,adj: unique
+unique gifts,4.0,440.0,2798.0,100000.0,8, ,adj: unique
+gifts unique,3.0,301.0,-24.0,100000.0,8, ,adj: unique
+personal gifts ,4.0,390.0,9.0,100000.0,8, ,adj: unique
+gift who has everything,81.0,484.0,7.0,6000.0,9, ,adj: unique
+personalised gift ,79.0,396.0,3.0,5000.0,8, ,adj: unique
+hand made gifts ,6.0,571.0,56.0,100000.0,9, ,adj: unique
+personalized gifts ,237.0,23713.0,59.0,100000.0,54, ,adj: unique
+witchy gifts ,869.0,4344.0,34.0,5000.0,31, ,adj: weird
+nerdy gifts ,357.0,713.0,37.0,2000.0,10, ,adj: weird
+gifts nerdy ,349.0,349.0,268.0,1000.0,8, ,adj: weird
+nerd gifts ,77.0,385.0,153.0,5000.0,8, ,adj: weird
+clever gifts ,515.0,3090.0,120.0,6000.0,28, ,adj: weird
+wicked gifts ,237.0,473.0,,2000.0,8, ,adj: weird
+quirky gifts ,323.0,1290.0,88.0,4000.0,26, ,adj: weird
+weird gifts ,80.0,481.0,10.0,6000.0,9, ,adj: weird
+gifts in their 20s,3840.0,2431.0,122.0,633.0,27, ,age
+gifts young 20- 25,2686.0,2686.0,62.0,1000.0,27, ,age
+gifts in their 60s,2102.0,1108.0,43.0,527.0,26, ,age
+gifts older over 70,1832.0,1832.0,32.0,1000.0,26, ,age
+cool gifts 50 year old,1586.0,1586.0,-3.0,1000.0,27, ,age
+best gifts in their 40s,1543.0,415.0,-3.0,269.0,8, ,age
+best gifts 28 year old,1492.0,482.0,1.0,323.0,9, ,age
+cool gifts in their 20s,1273.0,713.0,9.0,560.0,10, ,age
+gifts in their 50s,1148.0,435.0,18.0,379.0,8, ,age
+gifts 26 year old,1146.0,447.0,2.0,390.0,8, ,age
+popular gifts senior ,1043.0,463.0,33.0,444.0,8, ,age
+gifts in their 30s,906.0,484.0,100.0,534.0,9, ,age
+gifts 23 year old,905.0,410.0,558.0,453.0,8, ,age
+gifts young adults 18-25,832.0,387.0,36.0,465.0,8, ,age
+best gifts over 70,767.0,1533.0,-5.0,2000.0,26, ,age
+gifts older over 80,713.0,713.0,17.0,1000.0,10, ,age
+unique gifts senior ,583.0,1166.0,-15.0,2000.0,26, ,age
+gifts a 80 year old,582.0,1164.0,28.0,2000.0,26, ,age
+gifts middle aged ,573.0,470.0,28.0,820.0,8, ,age
+gifts 25 year old,548.0,475.0,-2.0,867.0,8, ,age
+gifts elderly ,522.0,4176.0,51.0,8000.0,29, ,age
+gifts a 25 year old,510.0,424.0,20.0,832.0,8, ,age
+young adult gifts ,473.0,3308.0,418.0,7000.0,28, ,age
+gift middle aged ,467.0,349.0,37.0,748.0,8, ,age
+gifts over 70,321.0,642.0,12.0,2000.0,10, ,age
+gifts young adult ,102.0,713.0,77.0,7000.0,10, ,age
+gifts over 40,83.0,417.0,26.0,5000.0,8, ,age
+gifts older ,81.0,5653.0,58.0,70000.0,31, ,age
+gifts young ,58.0,4679.0,62.0,80000.0,30, ,age
+gifts the elderly ,53.0,369.0,6.0,7000.0,8, ,age
+gift young adult ,48.0,334.0,143.0,7000.0,8, ,age
+gifts seniors ,45.0,449.0,70.0,10000.0,8, ,age
+gift older ,18.0,1290.0,28.0,70000.0,26, ,age
+vintage gifts ,14.0,1287.0,54.0,90000.0,26, ,age
+vintage gifts unique,12.0,373.0,93.0,30000.0,8, ,age
+young 's gifts,10.0,773.0,34.0,80000.0,11, ,age
+gifts adult ,9.0,907.0,31.0,100000.0,12, ,age
+gifts old ,7.0,535.0,18.0,80000.0,9, ,age
+gift young ,7.0,713.0,14.0,100000.0,10, ,age
+adult gifts ,6.0,573.0,26.0,100000.0,9, ,age
+best adult gifts,6.0,644.0,21.0,100000.0,10, ,age
+gift older ,6.0,392.0,22.0,70000.0,8, ,age
+gifts young ,5.0,410.0,20.0,80000.0,8, ,age
+gift adult ,2.0,301.0,13.0,200000.0,8, ,age
+best gifts 24 year old,0.0,344.0,,0.0,8, ,age
+cool gifts young ,0.0,358.0,,0.0,8, ,age
+birthday ecards ,1206.0,351.0,130.0,291.0,8, ,birthday
+birthday ecards  ,"1,206",351,130,291,8,,birthday
+birthday gifts over 60,588.0,1763.0,-1.0,3000.0,27, ,birthday
+birthday snacks ,452.0,452.0,2.0,1000.0,8, ,birthday
+birthday snacks  ,452,452,2,"1,000",8,,birthday
+23rd birthday gifts,416.0,378.0,24.0,909.0,8, ,birthday
+birthday candle ,380.0,2279.0,39.0,6000.0,28, ,birthday
+birthday candle  ,380,"2,279",39,"6,000",28,,birthday
+birthday gifts over 70,358.0,358.0,-11.0,1000.0,8, ,birthday
+birthday gifts friendship,259.0,10370.0,5.0,40000.0,38, ,birthday
+gifts birthday unique,150.0,14969.0,-2.0,100000.0,42, ,birthday
+birthday candles ,141.0,847.0,87.0,6000.0,11, ,birthday
+birthday candles  ,141,847,87,"6,000",11,,birthday
+birthday spa gifts ,108.0,431.0,-8.0,4000.0,8, ,birthday
+flowers birthday ,100.0,401.0,13.0,4000.0,8, ,birthday
+bestie birthday gifts ,92.0,1832.0,-7.0,20000.0,27, ,birthday
+birthday gifts senior ,88.0,351.0,16.0,4000.0,8, ,birthday
+overnight birthday gifts ,85.0,339.0,21.0,4000.0,8, ,birthday
+last minute birthday gifts ,64.0,449.0,6.0,7000.0,8, ,birthday
+s birthday gifts,64.0,6441.0,-10.0,100000.0,32, ,birthday
+birthday gift ,64.0,6445.0,-9.0,100000.0,32, ,birthday
+happy birthday gifts ,64.0,6447.0,36.0,100000.0,33, ,birthday
+self care birthday gifts ,59.0,411.0,-5.0,7000.0,8, ,birthday
+birthday gift ,53.0,1586.0,-13.0,30000.0,26, ,birthday
+happy birthday flowers ,47.0,468.0,19.0,10000.0,8, ,birthday
+happy birthday flowers  ,47,468,19,"10,000",8,,birthday
+ gifts birthday,41.0,4123.0,-15.0,100000.0,29, ,birthday
+friend birthday gifts ,41.0,4123.0,-19.0,100000.0,30, ,birthday
+funny birthday gifts ,37.0,3699.0,-9.0,100000.0,30, ,birthday
+birthday gifts friendship funny,34.0,335.0,-13.0,10000.0,8, ,birthday
+s birthday gifts unique,33.0,3290.0,6.0,100000.0,28, ,birthday
+birthday plants gifts ,31.0,311.0,-7.0,10000.0,8, ,birthday
+birthday food gifts ,24.0,486.0,-4.0,20000.0,9, ,birthday
+birthday presents ,24.0,2434.0,-13.0,100000.0,27, ,birthday
+birthday presents  ,24,"2,434",-13,"100,000",27,,birthday
+ birthday gifts,22.0,4344.0,-15.0,200000.0,30, ,birthday
+s gifts birthday,21.0,4124.0,-13.0,200000.0,29, ,birthday
+fun birthday gifts ,17.0,1164.0,-7.0,70000.0,26, ,birthday
+birthday care packages  ,15,461,-5,"30,000",8,,birthday
+gift birthday unique,14.0,1366.0,-12.0,100000.0,26, ,birthday
+unique birthday gifts ,14.0,1375.0,-17.0,100000.0,27, ,birthday
+friendship birthday gifts friends,13.0,404.0,-11.0,30000.0,8, ,birthday
+cute birthday gifts ,13.0,1349.0,-13.0,100000.0,26, ,birthday
+friends birthday gifts ,12.0,1203.0,7.0,100000.0,26, ,birthday
+birthday gifts older ,9.0,713.0,-17.0,80000.0,10, ,birthday
+best birthday gifts ,9.0,909.0,-16.0,100000.0,12, ,birthday
+friendship birthday gifts ,8.0,334.0,10.0,40000.0,8, ,birthday
+friend gifts birthday,8.0,773.0,-18.0,100000.0,11, ,birthday
+funny birthday gifts friends,6.0,410.0,12.0,70000.0,8, ,birthday
+cool birthday gifts ,6.0,440.0,-4.0,70000.0,8, ,birthday
+gifts their birthday,6.0,573.0,51.0,100000.0,9, ,birthday
+small birthday gifts ,6.0,642.0,-10.0,100000.0,10, ,birthday
+gifts birthday,6.0,1166.0,-5.0,200000.0,26, ,birthday
+fall birthday gifts ,5.0,369.0,-45.0,70000.0,8, ,birthday
+birthday gift older ,5.0,454.0,-6.0,100000.0,8, ,birthday
+birthday gift friend,5.0,459.0,-2.0,100000.0,8, ,birthday
+gift birthday ,5.0,470.0,-8.0,100000.0,8, ,birthday
+birthday gift ,5.0,907.0,1.0,200000.0,12, ,birthday
+birthday gifts funny,4.0,406.0,-11.0,100000.0,8, ,birthday
+ gifts birthday unique,4.0,431.0,-2.0,100000.0,8, ,birthday
+ birthday gifts friends unique,4.0,440.0,-1.0,100000.0,8, ,birthday
+christmas  ,"6,644","1,588",140,239,26,,christmas
+christmas gifts in their 20s,2480.0,1101.0,151.0,444.0,26, ,christmas
+funny christmas gifts ,2125.0,644.0,2133.0,303.0,10, ,christmas
+christmas gifts ,1895.0,189513.0,279.0,100000.0,253, ,christmas
+christmas gifts young 20- 25,1198.0,381.0,1453.0,318.0,8, ,christmas
+gifts christmas,1130.0,113012.0,28804.0,100000.0,159, ,christmas
+secret santa gifts ,724.0,4344.0,491.0,6000.0,30, ,christmas
+pleasure gifts christmas,406.0,406.0,235.0,1000.0,8, ,christmas
+holiday gifts ,307.0,30705.0,10940.0,100000.0,61, ,christmas
+christmas gifts in their 40s,216.0,431.0,179.0,2000.0,8, ,christmas
+christmas stocking stuffers  ,206,"4,123",246,"20,000",29,,christmas
+christmas gifts young ,197.0,1379.0,139.0,7000.0,26, ,christmas
+christmas gifts,158.0,15825.0,252.0,100000.0,43, ,christmas
+christmas gifts elderly ,117.0,466.0,65.0,4000.0,8, ,christmas
+christmas spa gifts ,93.0,371.0,17.0,4000.0,8, ,christmas
+christmas gifts,89.0,8858.0,207.0,100000.0,35, ,christmas
+30 christmas gifts,85.0,845.0,86.0,10000.0,11, ,christmas
+christmas gifts 30 year old,82.0,410.0,34.0,5000.0,8, ,christmas
+christmas presents ,71.0,6431.0,137.0,90000.0,32, ,christmas
+christmas presents  ,71,"6,431",137,"90,000",32,,christmas
+xmas gifts ,70.0,4914.0,265.0,70000.0,31, ,christmas
+christmas gifts who have everything,59.0,351.0,622.0,6000.0,8, ,christmas
+christmas gifts college ,54.0,535.0,382.0,10000.0,9, ,christmas
+christmas stockings stuffers  ,54,535,55,"10,000",9,,christmas
+inexpensive christmas gifts ,45.0,449.0,1638.0,10000.0,8, ,christmas
+thanksgiving gifts ,43.0,4342.0,410.0,100000.0,29, ,christmas
+christmas gifts older ,42.0,844.0,119.0,20000.0,11, ,christmas
+ gifts christmas,42.0,4163.0,598.0,100000.0,29, ,christmas
+christmas gift ,36.0,3641.0,188.0,100000.0,29, ,christmas
+unusual christmas gifts ,34.0,337.0,264.0,10000.0,8, ,christmas
+christmas gift ,33.0,3302.0,194.0,100000.0,28, ,christmas
+christmas gifts ,23.0,2282.0,178.0,100000.0,27, ,christmas
+christmas gift bundles ,20.0,392.0,93.0,20000.0,8, ,christmas
+holiday gift ,20.0,1366.0,142.0,70000.0,26, ,christmas
+christmas gifts over 60,18.0,351.0,67.0,20000.0,8, ,christmas
+christmas gifts friends,18.0,1825.0,179.0,100000.0,26, ,christmas
+bulk christmas gifts ,18.0,1836.0,243.0,100000.0,27, ,christmas
+christmas gifts,18.0,1836.0,203.0,100000.0,26, ,christmas
+christmas bundle gifts ,17.0,335.0,-18.0,20000.0,8, ,christmas
+christmas stuff ,16.0,465.0,4.0,30000.0,8, ,christmas
+christmas gift ,16.0,642.0,113.0,40000.0,10, ,christmas
+gifts christmas,16.0,1611.0,131.0,100000.0,26, ,christmas
+christmas stuff  ,16,465,4,"30,000",8,,christmas
+christmas gifts teachers ,14.0,420.0,231.0,30000.0,8, ,christmas
+'s gifts christmas,14.0,1365.0,854.0,100000.0,26, ,christmas
+small christmas gifts ,14.0,1377.0,173.0,100000.0,26, ,christmas
+winter gifts ,14.0,1379.0,86.0,100000.0,26, ,christmas
+christmas gifts friends ,13.0,1283.0,170.0,100000.0,26, ,christmas
+best christmas gifts ,13.0,1295.0,501.0,100000.0,26, ,christmas
+ christmas gifts,12.0,2318.0,169.0,200000.0,27, ,christmas
+personalized christmas gifts ,11.0,454.0,238.0,40000.0,8, ,christmas
+20 christmas gifts,11.0,909.0,131.0,80000.0,12, ,christmas
+fun christmas gifts ,9.0,454.0,607.0,50000.0,8, ,christmas
+christmas gifts best friends ,9.0,909.0,108.0,100000.0,12, ,christmas
+gifts christmas,8.0,773.0,97.0,100000.0,11, ,christmas
+christmas gift teachers ,8.0,773.0,576.0,100000.0,11, ,christmas
+cheap christmas gifts ,8.0,845.0,188.0,100000.0,11, ,christmas
+christmas gifts ,8.0,845.0,124.0,100000.0,11, ,christmas
+friend christmas gifts ,7.0,713.0,292.0,100000.0,10, ,christmas
+halloween gifts ,7.0,713.0,-21.0,100000.0,10, ,christmas
+holiday gifts,6.0,388.0,,70000.0,8, ,christmas
+gifts christmas,6.0,642.0,984.0,100000.0,10, ,christmas
+christmas gift ,6.0,644.0,211.0,100000.0,10, ,christmas
+gift christmas,6.0,644.0,666.0,100000.0,10, ,christmas
+bestie christmas gifts ,5.0,426.0,622.0,80000.0,8, ,christmas
+gifts christmas,5.0,450.0,29.0,100000.0,8, ,christmas
+great christmas gifts ,5.0,452.0,548.0,100000.0,8, ,christmas
+christmas gifts adult ,5.0,452.0,243.0,100000.0,8, ,christmas
+good christmas gifts ,5.0,458.0,315.0,100000.0,8, ,christmas
+gift christmas ,5.0,459.0,415.0,100000.0,8, ,christmas
+gifts christmas ,5.0,477.0,100.0,100000.0,8, ,christmas
+cute christmas gifts ,5.0,482.0,181.0,100000.0,9, ,christmas
+christmas gifts ,5.0,486.0,72.0,100000.0,9, ,christmas
+christmas gift ,5.0,534.0,67.0,100000.0,9, ,christmas
+christmas present ,4.0,376.0,128.0,100000.0,8, ,christmas
+christmas gifts,4.0,378.0,26.0,100000.0,8, ,christmas
+christmas gift,4.0,381.0,81.0,100000.0,8, ,christmas
+christmas gift ,4.0,406.0,43.0,100000.0,8, ,christmas
+christmas gifts ,4.0,420.0,128.0,100000.0,8, ,christmas
+christmas gifts,4.0,426.0,74.0,100000.0,8, ,christmas
+cool christmas gifts ,4.0,435.0,162.0,100000.0,8, ,christmas
+christmas present  ,4,376,128,"100,000",8,,christmas
+chrismas gifts ,3.0,302.0,12.0,100000.0,8, ,christmas
+christmas gift,3.0,573.0,139.0,200000.0,9, ,christmas
+christmas unique gifts ,2.0,311.0,,200000.0,8, ,christmas
+christmas gifts,2.0,364.0,87.0,200000.0,8, ,christmas
+gift christmas,2.0,378.0,,200000.0,8, ,christmas
+adult christmas gifts,2.0,388.0,52.0,200000.0,8, ,christmas
+office christmas gifts ,2.0,390.0,,200000.0,8, ,christmas
+gift christmas,2.0,397.0,12.0,200000.0,8, ,christmas
+christmas gifts,2.0,417.0,28.0,200000.0,8, ,christmas
+gift christmas,2.0,424.0,-6.0,200000.0,8, ,christmas
+giftchristmas,2.0,472.0,,200000.0,8, ,christmas
+ christmas gift,2.0,486.0,73.0,200000.0,9, ,christmas
+fancy tea cups  ,489,310,11,634,8,,cup
+cute mugs   aesthetic,463,463,92,"1,000",8,,cup
+cute mugs  ,232,"2,318",42,"10,000",28,,cup
+mugs  ,161,"6,431",100,"40,000",32,,cup
+pretty coffee mugs  ,134,535,20,"4,000",9,,cup
+tea mugs with lids  ,63,378,,"6,000",8,,cup
+cute coffee cups  ,47,466,58,"10,000",8,,cup
+coffee gift ,44.0,435.0,19.0,10000.0,8, ,cup
+cool mugs  ,38,344,47,"9,000",8,,cup
+coffee gifts ,35.0,351.0,68.0,10000.0,8, ,cup
+coffee accessories gifts ,31.0,628.0,89.0,20000.0,10, ,cup
+coffee gifts ,25.0,2284.0,28.0,90000.0,27, ,cup
+mug  ,12,466,4,"40,000",8,,cup
+drinking cup  ,11,571,40,"50,000",9,,cup
+coffee cups gift,9.0,376.0,145.0,40000.0,8, ,cup
+boho gifts unique,24.0,486.0,31.0,20000.0,9, ,home decor
+boho gifts ,20.0,1375.0,34.0,70000.0,27, ,home decor
+stocking stuffers  ,"6,042","181,251",359,"30,000",241,,home decor
+snail headband washing face,939.0,535.0,-5.0,570.0,9, ,home decor
+huddy ,938.0,454.0,4.0,484.0,8, ,home decor
+garden kit  ,550,387,-20,704,8,,home decor
+lighters  ,454,907,137,"2,000",12,,home decor
+winter necessities  ,435,435,64,"1,000",8,,home decor
+gadgets  ,412,"4,123",25,"10,000",29,,home decor
+funny candles   friends,387,773,27,"2,000",11,,home decor
+popcorn gifts ,312.0,312.0,14.0,1000.0,8, ,home decor
+stockings stuffers  ,115,"3,451",134,"30,000",28,,home decor
+stocking stuffers   unique,69,484,41,"7,000",9,,home decor
+stocking stuffers   under 10 dollars,64,642,208,"10,000",10,,home decor
+holiday stocking stuffers  ,59,355,109,"6,000",8,,home decor
+stocking stuffer  ,53,"1,584",167,"30,000",26,,home decor
+apartment gifts ,31.0,312.0,40.0,10000.0,8, ,home decor
+home essentials  ,26,"1,283","1,777","50,000",26,,home decor
+stuffers  ,20,399,132,"20,000",8,,home decor
+small stocking stuffers  ,17,845,172,"50,000",11,,home decor
+cute home decor  ,6,387,-7,"60,000",8,,home decor
+fun ,3.0,316.0,17.0,100000.0,8, ,home decor
+home gifts ,6.0,644.0,14.0,100000.0,10, ,home decor
+housewarming gifts ,87.0,4339.0,143.0,50000.0,30, ,home decor
+homemade gifts ,84.0,334.0,51.0,4000.0,8, ,home decor
+household gifts ,47.0,473.0,56.0,10000.0,8, ,home decor
+home decor gifts ,23.0,2284.0,205.0,100000.0,27, ,home decor
+new home gifts ,15.0,916.0,146.0,60000.0,12, ,home decor
+candles gifts ,521.0,4688.0,330.0,9000.0,33, ,home decor
+blanket hoodies  ,"19,980","19,980",124,"1,000",49,,hoodie/blanket
+wearable blankets  ,"18,794","18,794",554,"1,000",47,,hoodie/blanket
+hoodie blanket  ,"14,999","14,999",40,"1,000",42,,hoodie/blanket
+hooded blanket  ,"2,319","2,319",634,"1,000",27,,hoodie/blanket
+sweater blanket  ,"2,228","1,290",73,579,26,,hoodie/blanket
+blanket robe  ,"2,201",909,49,413,12,,hoodie/blanket
+blanket sweaters  ,"2,167","1,365",42,630,26,,hoodie/blanket
+oversized blanket hoodies  ,"1,871","1,837",141,982,26,,hoodie/blanket
+wearable blanket hoodie  ,"1,609","1,609",225,"1,000",27,,hoodie/blanket
+blanket hoodie  ,"1,366","1,366",132,"1,000",27,,hoodie/blanket
+plus size blanket hoodies  ,"1,301",385,39,296,8,,hoodie/blanket
+blanket robes   with hood,"1,272",383,"1,577",301,8,,hoodie/blanket
+snuggle hoodies  ,"1,020",452,718,443,8,,hoodie/blanket
+oversized hoodie blanket  ,845,845,59,"1,000",11,,hoodie/blanket
+body blanket  ,605,442,136,731,8,,hoodie/blanket
+blanket with sleeves  ,558,406,101,727,8,,hoodie/blanket
+blanket sweatshirt  ,537,459,134,854,8,,hoodie/blanket
+hoodie blankets  ,482,482,19,"1,000",9,,hoodie/blanket
+oversized hoodies  ,474,"23,693",50,"50,000",53,,hoodie/blanket
+sherpa wearable blanket  ,454,373,94,822,8,,hoodie/blanket
+wearable blanket  ,452,452,65,"1,000",8,,hoodie/blanket
+cozy wearable blanket  ,424,424,43,"1,000",8,,hoodie/blanket
+blanket hoodie adults,419.0,419.0,46.0,1000.0,8, ,hoodie/blanket
+hooded blankets adults,376.0,376.0,149.0,1000.0,8, ,hoodie/blanket
+headed hoodies  ,153,305,80,"2,000",8,,hoodie/blanket
+sleep hoodies  ,138,415,34,"3,000",8,,hoodie/blanket
+giant hoodies  ,34,"1,366",145,"40,000",26,,hoodie/blanket
+oversized   hoodie,18,355,68,"20,000",8,,hoodie/blanket
+big hoodies  ,16,644,19,"40,000",10,,hoodie/blanket
+oversized blanket hoodie ,12.0,348.0,110.0,30000.0,8, ,hoodie/blanket
+adult blanket hoodie ,12.0,358.0,1933.0,30000.0,8, ,hoodie/blanket
+oversized blanket hoodie  ,12,348,110,"30,000",8,,hoodie/blanket
+adult blanket hoodie  ,12,358,"1,933","30,000",8,,hoodie/blanket
+anxiety hoodies  ,141,424,214,"3,000",8,,inspirational
+destress gifts ,4284.0,844.0,11.0,197.0,11, ,inspirational
+grieving gifts ,670.0,1340.0,,2000.0,26, ,inspirational
+gifts depressed ,491.0,357.0,222.0,727.0,8, ,inspirational
+relaxation gifts ,443.0,8854.0,8.0,20000.0,35, ,inspirational
+gifts to cheer someone up ,357.0,357.0,-13.0,1000.0,8, ,inspirational
+get well gifts ,243.0,19470.0,-7.0,80000.0,50, ,inspirational
+cheer up gifts ,215.0,2147.0,-2.0,10000.0,28, ,inspirational
+relaxing gifts ,183.0,12787.0,795.0,70000.0,39, ,inspirational
+emotional support gifts ,121.0,482.0,8.0,4000.0,9, ,inspirational
+inspirational gifts ,117.0,10546.0,9.0,90000.0,39, ,inspirational
+positive affirmation gifts ,68.0,475.0,186.0,7000.0,8, ,inspirational
+encouragement gifts ,61.0,2433.0,3.0,40000.0,29, ,inspirational
+comforting gifts ,60.0,481.0,1.0,8000.0,9, ,inspirational
+relaxation gifts,40.0,403.0,346.0,10000.0,8, ,inspirational
+positive gifts ,40.0,1210.0,70.0,30000.0,26, ,inspirational
+ relaxation gifts,38.0,383.0,-10.0,10000.0,8, ,inspirational
+encouraging gifts ,30.0,907.0,6.0,30000.0,12, ,inspirational
+healthy gifts ,22.0,433.0,2.0,20000.0,8, ,inspirational
+gifts relaxation ,15.0,300.0,46.0,20000.0,8, ,inspirational
+sleep gifts ,6.0,385.0,27.0,70000.0,8, ,inspirational
+relax gifts ,5.0,419.0,-2.0,90000.0,8, ,inspirational
+functional gifts ,4.0,357.0,82.0,100000.0,8, ,inspirational
+get well gift ,4.0,392.0,11.0,90000.0,8, ,inspirational
+feel good gifts ,4.0,413.0,9.0,100000.0,8, ,inspirational
+support gifts ,4.0,431.0,24.0,100000.0,8, ,inspirational
+ inspirational gifts,3.0,344.0,31.0,100000.0,8, ,inspirational
+under 25 dollar items,481,481,23,"1,000",9,,price
+10 dollar items,71,714,73,"10,000",10,,price
+8 dollar items,65,388,79,"6,000",8,,price
+10 and under items,16,321,70,"20,000",8,,price
+under 10 dollars,9,"1,830",34,"200,000",26,,price
+5 items,4,447,-2,"100,000",8,,price
+under 20 dollars,2,486,12,"200,000",9,,price
+gifts 30s,3310.0,3310.0,37.0,1000.0,28, ,price
+unique gifts over 50,1740.0,3480.0,48.0,2000.0,28, ,price
+gifts over 50,264.0,1586.0,44.0,6000.0,26, ,price
+50 dollar gifts,192.0,383.0,492.0,2000.0,8, ,price
+gifts 30s,182.0,364.0,-12.0,2000.0,8, ,price
+15 dollar gifts,178.0,713.0,411.0,4000.0,10, ,price
+20 dollar gifts,161.0,642.0,608.0,4000.0,10, ,price
+25 dollar gifts,152.0,456.0,92.0,3000.0,8, ,price
+gift over 50,107.0,642.0,11.0,6000.0,10, ,price
+10 dollar gifts,79.0,475.0,36.0,6000.0,8, ,price
+10 dollar gifts,74.0,445.0,239.0,6000.0,8, ,price
+25 gifts unique,62.0,431.0,,7000.0,8, ,price
+10-15 dollar gifts,31.0,310.0,0.0,10000.0,8, ,price
+10 gifts,14.0,1366.0,87.0,100000.0,26, ,price
+5 gifts,13.0,1283.0,58.0,100000.0,26, ,price
+$10 gifts,9.0,907.0,45.0,100000.0,12, ,price
+25 gifts,6.0,644.0,324.0,100000.0,10, ,price
+20 gifts,6.0,644.0,147.0,100000.0,10, ,price
+5.00 gifts,5.0,463.0,395.0,100000.0,8, ,price
+10.00 gifts,5.0,481.0,209.0,100000.0,9, ,price
+15 gifts,5.0,482.0,1311.0,100000.0,9, ,price
+$15 gifts,4.0,301.0,83.0,80000.0,8, ,price
+20.00 gifts,4.0,351.0,410.0,100000.0,8, ,price
+15.00 gifts,4.0,378.0,49.0,100000.0,8, ,price
+30 gifts,4.0,442.0,33.0,100000.0,8, ,price
+s gifts 10 dollars,3.0,301.0,143.0,100000.0,8, ,price
+15 gift,3.0,323.0,,100000.0,8, ,price
+$20 gifts,3.0,337.0,86.0,100000.0,8, ,price
+pampering items  ,339,339,-11,"1,000",8,,selfcare
+massager  ,161,644,13,"4,000",10,,selfcare
+care boxes  ,13,401,-1,"30,000",8,,selfcare
+pamper set  ,51,304,-11,"6,000",8,,selfcare
+college care package  ,669,438,,655,8,,selfcare
+care package  ,124,"11,199",5,"90,000",41,,selfcare
+care packages  ,7,642,-6,"90,000",10,,selfcare
+hand care kit  ,936,844,37,902,11,,selfcare
+self care kit  ,218,435,12,"2,000",8,,selfcare
+self care essentials  ,89,445,8,"5,000",8,,selfcare
+body care  ,81,"2,431",20,"30,000",27,,selfcare
+self care sets  ,38,301,-3,"8,000",8,,selfcare
+personal care  ,4,431,7,"100,000",8,,selfcare
+self care kits  ,791,"1,582",74,"2,000",26,,selfcare
+lip care set  ,223,445,,"2,000",8,,selfcare
+self care set  ,90,452,68,"5,000",8,,selfcare
+self care  ,77,"2,318",52,"30,000",27,,selfcare
+toiletry set  ,71,426,15,"6,000",8,,selfcare
+beauty kits  ,47,473,3,"10,000",8,,selfcare
+beauty boxes  ,24,484,-9,"20,000",9,,selfcare
+ care package gift,23.0,459.0,4.0,20000.0,8, ,selfcare
+pampering gifts ,94.0,468.0,2.0,5000.0,8, ,selfcare
+pamper gifts ,93.0,466.0,2.0,5000.0,8, ,selfcare
+self care gifts,91.0,907.0,32.0,10000.0,12, ,selfcare
+ self care gifts,77.0,773.0,41.0,10000.0,11, ,selfcare
+ pampering gifts,69.0,346.0,61.0,5000.0,8, ,selfcare
+pampering gift ,415.0,2073.0,2.0,5000.0,27, ,selfcare
+pamper yourself gifts ,374.0,374.0,4.0,1000.0,8, ,selfcare
+gifts caregivers ,218.0,436.0,25.0,2000.0,8, ,selfcare
+shower steamers  ,"19,019","11,221",230,590,39,,shower
+spa gifts ,4626.0,92529.0,1572.0,20000.0,138, ,shower
+shower streamers  ,"4,074",440,,108,8,,shower
+bath bombs   relaxing,"3,267","3,267",311,"1,000",29,,shower
+shower bombs   aromatherapy,"3,250","2,431",74,748,27,,shower
+hair chalk  ,"3,245",714,,220,10,,shower
+shower steamers   aromatherapy,"2,712","1,611",,594,26,,shower
+toiletries  ,"2,123",484,6,228,9,,shower
+shower bombs  ,"1,281","1,164",53,909,26,,shower
+spa sets  ,"1,056",450,13,426,8,,shower
+christmas bath bombs  ,887,642,267,724,10,,shower
+shower bombs   relaxing,551,450,144,817,8,,shower
+bath steamers  ,500,388,43,776,8,,shower
+bath kit  ,365,365,27,"1,000",8,,shower
+spa kit  ,357,713,14,"2,000",10,,shower
+spa stuff  ,234,468,4,"2,000",8,,shower
+spa day essentials  ,190,380,,"2,000",8,,shower
+lotion set  ,114,456,107,"4,000",8,,shower
+body care set  ,111,445,22,"4,000",8,,shower
+bath items  ,70,419,214,"6,000",8,,shower
+spa accessories  ,61,486,5,"8,000",9,,shower
+spa gifts,37.0,373.0,20.0,10000.0,8, ,shower
+bath products  ,36,713,14,"20,000",10,,shower
+spa  ,8,305,-12,"40,000",8,,shower
+body sets  ,7,358,18,"50,000",8,,shower
+fuzzy socks  ,"43,910","131,731",90,"3,000",188,,socks
+muk luk socks  ,"17,804","4,914",130,276,30,,socks
+cozy socks  ,"8,106","24,317",105,"3,000",54,,socks
+fussy socks  ,"4,846","1,163",57,240,26,,socks
+cabin socks  ,"4,023","3,460",94,860,29,,socks
+worlds softest socks  ,"3,464","3,464",67,"1,000",28,,socks
+tehook fuzzy socks  ,"3,431",573,221,167,9,,socks
+cozy earth socks  ,"2,657",481,678,181,9,,socks
+socks  ,"2,485","198,787",8,"80,000",263,,socks
+warm socks  ,"2,481","24,813",125,"10,000",54,,socks
+fuzzy christmas socks  ,"2,454","4,907",345,"2,000",31,,socks
+cute fuzzy socks  ,"2,316","2,316",85,"1,000",27,,socks
+bed socks  ,"2,112",773,20,366,11,,socks
+winter socks  ,"2,095","20,946",109,"10,000",49,,socks
+long fuzzy socks  ,"1,836","1,836",107,"1,000",27,,socks
+ugg fuzzy socks  ,"1,760",426,62,242,8,,socks
+warm fuzzy socks  ,"1,729","3,457",96,"2,000",28,,socks
+cozy socks   with grippers,"1,533","1,533",37,"1,000",26,,socks
+chenille socks  ,"1,501",644,65,429,10,,socks
+spa socks  ,"1,382","1,285",15,930,26,,socks
+warming socks  ,"1,366","1,366",89,"1,000",26,,socks
+snuggy  ,"1,351",431,580,319,8,,socks
+foozies socks  ,"1,224",573,405,468,9,,socks
+fuzzy socks   christmas,"1,215","2,429",300,"2,000",27,,socks
+fur socks  ,"1,046",431,61,412,8,,socks
+sleeper socks  ,"1,039",348,"1,307",335,8,,socks
+flannel socks  ,"1,013",320,39,316,8,,socks
+chemo socks  ,975,308,-7,316,8,,socks
+fuzzy socks   size 9-12,936,397,,424,8,,socks
+sleep socks  ,921,"1,841",32,"2,000",26,,socks
+sleep socks   loose fit,905,654,109,723,10,,socks
+large fuzzy socks   10-13,878,417,77,475,8,,socks
+bed socks   loose fit,847,326,-2,385,8,,socks
+soft socks   fuzzy,791,"1,582",71,"2,000",26,,socks
+winter stockings  ,692,"3,460",77,"5,000",28,,socks
+fuzzy socks   bulk,690,"2,071",174,"3,000",27,,socks
+warm socks   winter,644,"6,438",179,"10,000",32,,socks
+travel socks   airplane,632,438,5,693,8,,socks
+fuzzy ankle socks  ,605,"1,209",50,"2,000",26,,socks
+lounge socks  ,574,574,22,"1,000",9,,socks
+blue fuzzy socks  ,571,456,"1,356",798,8,,socks
+fuzzy socks   fall,553,420,-3,759,8,,socks
+sherpa socks  ,517,304,13,588,8,,socks
+fuzzy winter socks  ,466,466,53,"1,000",8,,socks
+fall fuzzy socks  ,464,387,-22,834,8,,socks
+fuzzy crew socks  ,438,438,201,"1,000",8,,socks
+cozy crew socks  ,431,431,61,"1,000",8,,socks
+soft fuzzy socks  ,423,845,55,"2,000",11,,socks
+fuzzy socks   cute,410,410,36,"1,000",8,,socks
+warm fluffy socks  ,403,403,230,"1,000",8,,socks
+winter fuzzy socks  ,388,388,"1,249","1,000",8,,socks
+cozy fuzzy socks  ,381,381,141,"1,000",8,,socks
+soft fluffy socks  ,373,373,92,"1,000",8,,socks
+plus size fuzzy socks   10-13,369,369,236,"1,000",8,,socks
+fuzzy sleep socks  ,364,364,21,"1,000",8,,socks
+fluffy socks  ,357,713,35,"2,000",10,,socks
+fuzzy socks   size 11,342,342,345,"1,000",8,,socks
+fuzzy boot socks  ,342,342,"1,162","1,000",8,,socks
+warm cozy socks  ,322,644,35,"2,000",10,,socks
+socks   ankle,322,"6,447",21,"20,000",32,,socks
+bulk fuzzy socks  ,302,907,55,"3,000",12,,socks
+fuzzy halloween socks  ,301,301,41,"1,000",8,,socks
+cozy winter socks  ,241,482,460,"2,000",9,,socks
+heavy socks   winter,237,473,115,"2,000",8,,socks
+fun fuzzy socks  ,235,470,299,"2,000",8,,socks
+thick fuzzy socks  ,227,454,63,"2,000",8,,socks
+fleece socks   winter,215,644,162,"3,000",10,,socks
+cozy slipper socks  ,214,642,31,"3,000",10,,socks
+tall fuzzy socks  ,191,573,25,"3,000",9,,socks
+cozy boot socks  ,188,376,39,"2,000",8,,socks
+warm winter socks  ,183,"1,832",107,"10,000",26,,socks
+cloud socks  ,158,475,1,"3,000",8,,socks
+socks   fuzzy,157,472,8,"3,000",8,,socks
+night socks  ,137,411,203,"3,000",8,,socks
+heavy socks  ,135,404,79,"3,000",8,,socks
+best fuzzy socks  ,132,397,164,"3,000",8,,socks
+extra large fuzzy socks   13-15,127,381,21,"3,000",8,,socks
+cute winter socks  ,114,456,73,"4,000",8,,socks
+soft socks  ,91,"3,641",39,"40,000",29,,socks
+fleece socks  ,84,334,57,"4,000",8,,socks
+cute cozy socks  ,77,387,334,"5,000",8,,socks
+home socks  ,67,401,38,"6,000",8,,socks
+cute warm socks  ,65,388,148,"6,000",8,,socks
+fall socks  ,63,440,-22,"7,000",8,,socks
+socks   winter,57,571,26,"10,000",9,,socks
+soft winter socks  ,54,380,236,"7,000",8,,socks
+cute fluffy socks  ,48,335,217,"7,000",8,,socks
+comfy socks  ,47,470,20,"10,000",8,,socks
+soft socks   fuzzy christmas,47,373,46,"8,000",8,,socks
+soft ankle socks  ,44,443,3,"10,000",8,,socks
+warm soft socks  ,44,435,60,"10,000",8,,socks
+socks   warm,42,419,37,"10,000",8,,socks
+warm thick socks  ,38,378,533,"10,000",8,,socks
+thick warm socks  ,36,713,41,"20,000",10,,socks
+sock warmers  ,28,845,86,"30,000",11,,socks
+thick socks  ,23,909,28,"40,000",12,,socks
+warmer socks  ,22,431,146,"20,000",8,,socks
+fuzzy socks   pack,18,357,21,"20,000",8,,socks
+best socks  ,18,713,30,"40,000",10,,socks
+fashion socks  ,14,713,-11,"50,000",10,,socks
+comfortable socks  ,9,534,1,"60,000",9,,socks
+socks   thick,7,360,183,"50,000",8,,socks
+sock  ,6,472,3,"80,000",8,,socks
+softest socks  ,5,426,99,"80,000",8,,socks
+suitcase covers luggage,4276.0,12827.0,-25.0,3000.0,42, ,travel
+alaska cruise essentials  ,"2,966",433,-6,146,8,,travel
+travel bag sets  ,"1,498",415,21,277,8,,travel
+hospital bag   labor delivery essentials,"1,421",452,-7,318,8,,travel
+travel hacks  ,"1,309",419,-7,320,8,,travel
+travel essentials  ,"1,255","112,936",197,"90,000",159,,travel
+luxury luggage sets  ,"1,136",442,-9,389,8,,travel
+japan travel essentials  ,"1,127",301,,267,8,,travel
+travel essentials   for flying,994,"2,982",254,"3,000",28,,travel
+europe travel essentials  ,907,907,18,"1,000",12,,travel
+suitcase organizer bags set  ,836,419,416,501,8,,travel
+travel kit  ,345,"3,453",-18,"10,000",28,,travel
+travel finds   2024,308,308,53,"1,000",8,,travel
+beach purse   vacation,258,773,-5,"3,000",11,,travel
+cosmetic bags   travel set,228,"1,366",43,"6,000",26,,travel
+travel safety essentials  ,227,909,-18,"4,000",12,,travel
+airplane travel essentials  ,215,644,20,"3,000",10,,travel
+hospital essentials  ,202,404,5,"2,000",8,,travel
+travel packing bags  ,150,449,"6,133","3,000",8,,travel
+vacation essentials  ,121,"2,429",26,"20,000",27,,travel
+cruise essentials  ,102,713,68,"7,000",10,,travel
+traveling essentials  ,99,"2,982",18,"30,000",28,,travel
+airport essentials  ,94,468,16,"5,000",8,,travel
+travel accessories   must haves,71,713,43,"10,000",10,,travel
+travel accessories  ,64,"6,447",28,"100,000",32,,travel
+travel necessities  ,64,"1,285",60,"20,000",26,,travel
+beach trip essentials  ,62,373,-1,"6,000",8,,travel
+travel must haves  ,61,"1,836",-8,"30,000",26,,travel
+beach necessities  ,60,419,1,"7,000",8,,travel
+travel gadgets  ,59,475,56,"8,000",8,,travel
+travel organizers  ,58,"2,319",494,"40,000",27,,travel
+traveler gifts ,46.0,456.0,64.0,10000.0,8, ,travel
+carry on essentials  ,44,442,-2,"10,000",8,,travel
+travel kits  ,22,443,-5,"20,000",8,,travel
+solo travel essentials  ,21,411,-6,"20,000",8,,travel
+travel organizer bags  ,19,571,,"30,000",9,,travel
+travel size essentials  ,17,"1,365",-7,"80,000",26,,travel
+trip essentials  ,15,459,-2,"30,000",8,,travel
+traveling gifts ,10.0,419.0,-4.0,40000.0,8, ,travel
+travel supplies  ,9,378,9,"40,000",8,,travel
+travel items  ,9,909,-4,"100,000",12,,travel
+travel set  ,8,422,37,"50,000",8,,travel
+travel stuff  ,7,346,-21,"50,000",8,,travel
+travel gear  ,7,373,-22,"50,000",8,,travel
+travel needs  ,4,378,-6,"100,000",8,,travel
+gift travelers ,64.0,642.0,0.0,10000.0,10, ,travel
+gifts traveler ,55.0,387.0,-4.0,7000.0,8, ,travel
+gifts travelers ,232.0,2316.0,22.0,10000.0,27, ,travel
+side satchel bags ,125.0,374.0,-6.0,3000.0,8, ,work
+side purse crossbody,71.0,714.0,40.0,10000.0,10, ,work
+best teacher gifts ,12.0,1163.0,41.0,100000.0,26, ,work
+hosting gifts ,321.0,642.0,74.0,2000.0,10, ,work
+pick me up gifts ,211.0,844.0,-10.0,4000.0,11, ,work
+postpartum gifts ,197.0,394.0,474.0,2000.0,8, ,work
+secretary gifts ,161.0,484.0,67.0,3000.0,9, ,work
+promotion gifts ,158.0,1581.0,-3.0,10000.0,30, ,work
+co worker gifts ,115.0,3449.0,47.0,30000.0,28, ,work
+leadership gifts ,109.0,436.0,37.0,4000.0,8, ,work
+organization gifts ,43.0,429.0,61.0,10000.0,8, ,work
+teacher appreciation gifts ,40.0,1212.0,103.0,30000.0,29, ,work
+office gifts ,24.0,2431.0,21.0,100000.0,27, ,work
+office stuff  ,20,394,-10,"20,000",8,,work
+work from home gifts ,14.0,429.0,19.0,30000.0,8, ,work
+gift teachers ,12.0,1209.0,19.0,100000.0,26, ,work
+gifts working ,10.0,406.0,-9.0,40000.0,8, ,work
+gifts office ,5.0,475.0,28.0,100000.0,8, ,work
+ office gifts,3.0,323.0,2.0,100000.0,8, ,work
+teachers gifts ,3.0,346.0,-7.0,100000.0,8, ,work
+gifts co workers ,2.0,349.0,191.0,200000.0,8, ,work
+gifts professional ,2.0,401.0,-6.0,200000.0,8, ,work
+gift office ,2.0,301.0,45.0,200000.0,8, ,work
