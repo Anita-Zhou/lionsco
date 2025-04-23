@@ -1,7 +1,8 @@
 import pandas as pd
 from openpyxl import load_workbook
-from openpyxl.styles import PatternFill
+from openpyxl.styles import PatternFill, Font
 from copy import copy
+from openpyxl.utils import get_column_letter
 
 input_file = input("请输入你要处理的文件的路径: ")
 title_row = int(input("请输入标题所在的行数 (比如，从上至下第一行，请输入 “1”): "))
@@ -143,6 +144,43 @@ for new_row_idx, original_row_idx in enumerate(highlighted_rows, start=2):
         new_cell = highlight_ws.cell(row=new_row_idx, column=col_idx)
         new_cell.value = cell.value
         new_cell.fill = copy(cell.fill)
+
+# === Step 8 最后突出标题行的颜色，加上具体的指标 ===
+# 设置标题颜色
+title_fill = PatternFill(start_color='404040', end_color='404040', fill_type='solid')
+title_font = Font(color='FFFFFF', bold=True)
+
+for cell in highlight_ws[1]:
+    cell.fill = title_fill
+    cell.font = title_font
+
+# 打开指标模板
+other_wb = load_workbook(filename="..\..\反查关键词模板.xlsx")
+other_ws = other_wb["高亮词"]
+
+# Insert new row at the top of highlight_ws
+highlight_ws.insert_rows(1)
+
+# Copy values and formatting from the first row of the source worksheet
+for col_idx, cell in enumerate(other_ws[1], start=1):
+    target_cell = highlight_ws.cell(row=1, column=col_idx)
+    target_cell.value = cell.value
+    target_cell.font = copy(cell.font)
+    target_cell.fill = copy(cell.fill)
+
+# 设置列宽
+for col in highlight_ws.columns:
+    max_length = 0
+    col_letter = get_column_letter(col[0].column)
+    for cell in col:
+        try:
+            cell_length = len(str(cell.value))
+            if cell_length > max_length:
+                max_length = cell_length
+        except:
+            pass
+    adjusted_width = max_length + 2
+    highlight_ws.column_dimensions[col_letter].width = adjusted_width
 
 # Save final file
 output_file = input_file.replace(".xlsx", "_formatted.xlsx")
