@@ -65,7 +65,7 @@ async def scrape_row(url, fieldnames):
 
             await browser.close()
     except Exception as e:
-        print(f"❌ 抓取失败: {url}\n原因: {e}")
+        print(f"抓取失败: {url}\n原因: {e}")
         for field in fieldnames:
             if field not in result:
                 result[field] = ""
@@ -77,27 +77,27 @@ async def scrape_all(urls, fieldnames):
 
 # 主函数：询问路径和标题行
 def main_dynamic_fields():
-    input_csv = input("📄 请输入 CSV 文件路径（例如 supplier_data.csv）：").strip()
+    input_csv = input("请输入 CSV 文件路径）：").strip()
     if not input_csv:
-        print("❌ 未输入文件路径，程序终止。")
+        print("未输入文件路径，程序终止。")
         return
 
     try:
-        header_input = input("🔢 请输入标题行的行号（例如第2行请输入 2）：").strip()
+        header_input = input("请输入标题行的行号（例如第2行请输入 2）：").strip()
         header_idx = int(header_input) - 1
     except ValueError:
-        print("❌ 标题行输入无效，程序终止。")
+        print("标题行输入无效，程序终止。")
         return
 
     try:
         df = pd.read_csv(input_csv, header=header_idx)
     except Exception as e:
-        print(f"❌ 无法读取 CSV 文件：{e}")
+        print(f"无法读取 CSV 文件：{e}")
         return
 
     fieldnames = df.columns.tolist()
     if "URL" not in fieldnames:
-        print("❌ CSV 中未找到 'URL' 列")
+        print("CSV 中未找到 'URL' 列")
         return
 
     urls = df["URL"].dropna().tolist()
@@ -108,7 +108,7 @@ def main_dynamic_fields():
     result_df = pd.DataFrame(results)
     output_csv = "供应商信息_结果.csv"
     result_df.to_csv(output_csv, index=False, encoding="utf-8-sig")
-    print(f"✅ 抓取完成，已保存为：{output_csv}")
+    print(f"抓取完成，已保存为：{output_csv}")
 
 if __name__ == "__main__":
     main_dynamic_fields()
