@@ -1,0 +1,232 @@
+[
+  {
+    "name": "3rdPartyCookie",
+    "value": "1747126615347",
+    "domain": "main.m.tmall.com",
+    "path": "/app/vip/h5-webapp",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "mtop_partitioned_detect",
+    "value": "1",
+    "domain": ".1688.com",
+    "path": "/",
+    "expires": 1747131814.195374,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_m_h5_tk",
+    "value": "dc752827e1920d7152f006880bbe19c0_1747133614890",
+    "domain": ".1688.com",
+    "path": "/",
+    "expires": 1747131814.195441,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_m_h5_tk_enc",
+    "value": "2962a02e1309634b891ac1936995cece",
+    "domain": ".1688.com",
+    "path": "/",
+    "expires": 1747131814.195454,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "log-echo-utdid",
+    "value": "utdid%3D52g3i2nbpe9%26user%3D%26time%3D1747126414418",
+    "domain": ".air.1688.com",
+    "path": "/",
+    "expires": 1749718414,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "cna",
+    "value": "j/apIPOIxh4CAXeIzn3jAtPE",
+    "domain": ".mmstat.com",
+    "path": "/",
+    "expires": 1781686610.489038,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "__cn_logon__",
+    "value": "false",
+    "domain": ".1688.com",
+    "path": "/",
+    "expires": 1747731214.679822,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "xlly_s",
+    "value": "1",
+    "domain": ".1688.com",
+    "path": "/",
+    "expires": 1747385614,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "EGG_SESS",
+    "value": "B0I36cngJoB0vMJDO2zMzUb1ETLerNRsHQLfv7FHNpsaoY2vsvZ76ljpP8CuEXVgM3zg5MKo1BrZznMQKihSGAjQrxVv7FJwOggi7WZkb909wDUc79q_ssiAeVfQTobTIWj9EwI1IF7paml4BAEWelQDeLrn1Bkv91_HqQuZ6jVq_St1ATG4esAGOpdwiKST",
+    "domain": "insights.1688.com",
+    "path": "/",
+    "expires": 1747212815.128996,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_user_vitals_session_data_",
+    "value": "{\"user_line_track\":true,\"ul_session_id\":\"4l1ylhqtejf\",\"last_page_id\":\"www.1688.com%2F6r15sj90n4a\"}",
+    "domain": ".1688.com",
+    "path": "/",
+    "expires": 1747213010,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "leftMenuLastMode",
+    "value": "COLLAPSE",
+    "domain": ".1688.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "sca",
+    "value": "d01816c1",
+    "domain": ".mmstat.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "atpsida",
+    "value": "9e38c628379c5fc2ec9b91f9_1747126611_2",
+    "domain": ".mmstat.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "cna",
+    "value": "j/apIPOIxh4CAXeIzn3jAtPE",
+    "domain": ".1688.com",
+    "path": "/",
+    "expires": 1781686610.535616,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "plugin_home_downLoad_cookie",
+    "value": "%E4%B8%8B%E8%BD%BD%E6%8F%92%E4%BB%B6",
+    "domain": ".1688.com",
+    "path": "/",
+    "expires": 1747385810,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "isg",
+    "value": "BBwcqsOTmAz7e2zQroNg4rGf7TrOlcC_5yBXavYdKIfqQbzLHqWQT5Ljo6i5SfgX",
+    "domain": ".1688.com",
+    "path": "/",
+    "expires": 1762678610,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "leftMenuModeTip",
+    "value": "shown",
+    "domain": ".1688.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "tfstk",
+    "value": "gbMrMZvsELpPm2z8ZxwF_VQtPI28HJ81avaQxDm3Vz4lFT_ngkZ1-wmHy2kUo8VKNya78JoK7nT6Cdi-2JFH5F96ha7dVJUHdJAbnAESBF86Cdio2JeH5FMBzLBbol63K74uni4YYyb3Z22cmlUcEkXuxZx4krXlt_Vlo-qQv94n-JxqmrE3Ku03ZnomawF3_trLZHthYUdeWrPzS04VQmM4qPC-qrWFLxl4aPXQu9Xn3unUBDYCQBai6zN_WqvfUJo0YqPsaFWr8DmttSkFr3gix4H4eRRB25lmGfNrgUXUlYZUsJVVx9mqqrgZERvGuohmVXD-zMW32YM_TPF2x9FQnANis4SpXm2ux2FtdFB8rDmtBfwwUNEricyV4QbLmvTymF_hT7qY0Pt2mcsWw1iFtCXO96F5koz6q3fd97qa0Pt2X6CLw4r453Yl.",
+    "domain": ".1688.com",
+    "path": "/",
+    "expires": 1762678610,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_samesite_flag_",
+    "value": "true",
+    "domain": ".taobao.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "3PcFlag",
+    "value": "1747126616215",
+    "domain": ".taobao.com",
+    "path": "/",
+    "expires": 1748019415.526962,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "cookie2",
+    "value": "1c5197f0dc3b9d0f2a250a12a6c38eb0",
+    "domain": ".taobao.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "t",
+    "value": "235bf5f48805773d0e5930a235601c9f",
+    "domain": ".taobao.com",
+    "path": "/",
+    "expires": 1754931415.526993,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_tb_token_",
+    "value": "f73ee50a63bd4",
+    "domain": ".taobao.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  }
+]

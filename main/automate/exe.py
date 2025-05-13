@@ -1,34 +1,32 @@
-import pickle
-import time
-import os
-import download
-from download import click_button
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoSuchElementException, TimeoutException
+import asyncio
+import json
+from pathlib import Path
+from playwright.async_api import async_playwright
 
-# Get the absolute path to the Chrome extension folder
-BASE_DIR = "./"  # Gets the 'main' folder path
-EXTENSION_PATH = os.path.join(BASE_DIR, "../aadiiicebnjmjmibjengdohedcfeekeg/1.3.9.4_0")
+COOKIE_FILE = "1688_cookies.json"
 
-# Set up Chrome options and load the extension
-options = webdriver.ChromeOptions()
-options.add_argument(f"--load-extension={EXTENSION_PATH}")
+async def login_and_save_cookies():
+    user_data_dir = str(Path.home() / "AppData/Local/Google/Chrome/User Data")  # Windows路径
+    profile = "Default"  # 或 "Profile 1"
 
-# 是否在下载时包含五点描述，产品属性，和子类目
-download_option = [1,0,0]
+    async with async_playwright() as p:
+        context = await p.chromium.launch_persistent_context(
+            user_data_dir=f"{user_data_dir}/{profile}",
+            headless=False,
+            slow_mo=50
+        )
+        page = await context.new_page()
+        await page.goto("https://detail.1688.com/")
+        print("🧠 请手动完成登录 & 验证...")
 
-# 启动 WebDriver 并加载用户配置
-driver = webdriver.Chrome(options=options)
+        input("✅ 登录完成后按下回车保存 cookies：")
 
-driver.get("https://www.amazon.com/gp/bestsellers")  # Amazon Best Sellers 页面
+        cookies = await context.cookies()
+        with open(COOKIE_FILE, "w", encoding="utf-8") as f:
+            json.dump(cookies, f, ensure_ascii=False, indent=2)
 
-for i in range(7):
-    time.sleep(10)
-    print(str((i+1) * 10) + " secs passed.")
+        print(f"🍪 Cookies 已保存到 {COOKIE_FILE}")
+        await context.close()
 
-wait = WebDriverWait(driver, 10)
-
-download.download_review(wait, driver, download_option)
+if __name__ == "__main__":
+    asyncio.run(login_and_save_cookies())
