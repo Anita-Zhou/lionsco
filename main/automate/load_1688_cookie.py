@@ -17,15 +17,15 @@ async def login_and_save_cookies():
         )
         page = await context.new_page()
         await page.goto("https://detail.1688.com/")
-        print("🧠 请手动完成登录 & 验证...")
+        print("请手动完成登录 & 验证...")
 
-        input("✅ 登录完成后按下回车保存 cookies：")
+        input("登录完成后按下回车保存 cookies：")
 
         cookies = await context.cookies()
         with open(COOKIE_FILE, "w", encoding="utf-8") as f:
             json.dump(cookies, f, ensure_ascii=False, indent=2)
 
-        print(f"🍪 Cookies 已保存到 {COOKIE_FILE}")
+        print(f"Cookies 已保存到 {COOKIE_FILE}")
         await context.close()
 
 if __name__ == "__main__":
